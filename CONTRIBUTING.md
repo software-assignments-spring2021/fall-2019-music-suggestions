@@ -3,8 +3,9 @@
 ## Daily Standups Schedule
 
 Monday: 1:45pm
-Tuesday: 7pm 
+
 Wednesday: 1:45pm
+
 Friday: 3pm
 
 ## Code of Conduct
