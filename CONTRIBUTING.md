@@ -1,9 +1,11 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
+## Daily Standups Schedule
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+Monday: 1:45pm
+Tuesday: 7pm 
+Wednesday: 1:45pm
+Friday: 3pm
 
 ## Code of Conduct
 
