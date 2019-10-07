@@ -32,7 +32,7 @@ I am the lead singer of the post punk band “The Slugs” based in Queens. We o
 
 #Use Cases
 
-
+![alt text](https://github.com/nyu-software-engineering/fall-2019-music-suggestions/blob/master/img/Use_Case_Diagram.png)
 
 Signing up for a New Account
 Actor: New Users
@@ -59,3 +59,5 @@ Actor: Service Provider Users
 Scenario: If a service provider is looking to work with another service provider, they can request to collaborate on gigs. For example if a band is looking for a drummer for one show, then they can book the drummer as an artist.  
 
 #Domain Model
+
+![alt text](https://github.com/nyu-software-engineering/fall-2019-music-suggestions/blob/master/img/Domain_model.png)
