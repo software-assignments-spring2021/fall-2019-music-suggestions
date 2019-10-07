@@ -30,7 +30,7 @@ Age: 27
 Phone: 555-398-2216
 I am the lead singer of the post punk band “The Slugs” based in Queens. We often play the same local venues every month because it’s hard to promote ourselves to other venues. I don’t know who to contact or how to get their attention. We try to promote ourselves on other social media platforms, but with so many other types of profiles on these sites, it would be a miracle if a booking manager actually found us.  
 
-#Use Cases
+# Use Cases
 
 ![alt text](https://github.com/nyu-software-engineering/fall-2019-music-suggestions/blob/master/img/Use_Case_Diagram.png)
 
@@ -58,6 +58,6 @@ Collaboration
 Actor: Service Provider Users
 Scenario: If a service provider is looking to work with another service provider, they can request to collaborate on gigs. For example if a band is looking for a drummer for one show, then they can book the drummer as an artist.  
 
-#Domain Model
+# Domain Model
 
 ![alt text](https://github.com/nyu-software-engineering/fall-2019-music-suggestions/blob/master/img/Domain_model.png)
