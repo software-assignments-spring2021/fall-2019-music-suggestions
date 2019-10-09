@@ -8,6 +8,10 @@ Wednesday: 1:45pm
 
 Friday: 3pm
 
+## Definition of Done
+
+An issue is considered complete when it has been reviewed and approved by the Product Owner. 
+
 ## Code of Conduct
 
 ### Our Pledge
