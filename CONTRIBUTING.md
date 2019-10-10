@@ -12,6 +12,10 @@ Friday: 3pm
 
 An issue is considered complete when it has been reviewed and approved by the Product Owner. 
 
+## Git Workflow
+
+We are following trunk based development practices.  
+
 ## Code of Conduct
 
 ### Our Pledge
