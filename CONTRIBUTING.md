@@ -14,7 +14,11 @@ An issue is considered complete when it has been reviewed and approved by the Pr
 
 ## Git Workflow
 
-We are following trunk based development practices.  
+We are utilizing a feature-branch workflow.
+
+## Conflict Resolution
+
+Work related conflict between developers will be handled by the development team. If a resolution can not be unanimously agreed upon, the issue will be brought to the Professor. More serious conflict as outlined in our code of conduct should be swiftly brought to the attention of the professor.  
 
 ## Code of Conduct
 
