@@ -1,0 +1,21 @@
+body {
+  background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
+  background-size: cover;
+  color: white;
+
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  position: relative;
+  top: 150px;
+  text-align: center;
+}
+body img{
+  max-height: 400px;
+  width: auto;
+}
+
+a{
+  color: white;
+  font-size: 16pt;
+}
