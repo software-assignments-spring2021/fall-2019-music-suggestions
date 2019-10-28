@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 export default class CreateUser extends Component {
   constructor(props){
     super(props);
@@ -16,6 +17,7 @@ export default class CreateUser extends Component {
       password: ''
     }
   }
+
 
 
 //text box input setting for email
@@ -101,3 +103,15 @@ onSubmit(e){
     )
   }
 }
+
+export sayHello: function(){
+return 'hello';
+}
+
+/*
+module.exports = {
+  sayHello: function(){
+  return 'hello';
+  }
+}
+*/
