@@ -19,3 +19,13 @@ a{
   color: white;
   font-size: 16pt;
 }
+
+button {
+  background-color: #d2c2b0;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
