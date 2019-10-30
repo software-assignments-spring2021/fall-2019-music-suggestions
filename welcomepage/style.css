@@ -1,14 +1,20 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 #section1 {
-  height: 600px;
+  height: 670px;
   background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
   background-size: cover;
+  margin: 0px;
 }
 
 #section2 {
   background-image: url("https://media.giphy.com/media/LOFEhmimtAAZW/giphy.gif");
   background-size: cover;
-  height: 600px;
+  height: 670px;
   background-size:100%;
+  margin: 0px;
 }
 
 body {
@@ -18,6 +24,8 @@ body {
   font-size: 20pt;
   position: relative;
   text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 body p{
@@ -34,7 +42,7 @@ body img{
 
 a{
   position: relative;
-    top: 150px;
+  top: 150px;
   color: white;
   font-size: 16pt;
 }
@@ -49,6 +57,12 @@ button {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover{
+  background-color: white;
+  color: #d2c2b0;
 }
 
 h2{
