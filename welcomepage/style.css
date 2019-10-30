@@ -1,26 +1,47 @@
-body {
+#section1 {
+  height: 600px;
   background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
   background-size: cover;
-  color: white;
+}
 
+#section2 {
+  background-image: url("https://media.giphy.com/media/LOFEhmimtAAZW/giphy.gif");
+  background-size: cover;
+  height: 600px;
+  background-size:100%;
+}
+
+body {
+  color: white;
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 20pt;
   position: relative;
-  top: 150px;
   text-align: center;
 }
+
+body p{
+  position: relative;
+  top: 150px;
+}
+
 body img{
+  position: relative;
+  top: 150px;
   max-height: 400px;
   width: auto;
 }
 
 a{
+  position: relative;
+    top: 150px;
   color: white;
   font-size: 16pt;
 }
 
 button {
+  position:relative;
+  top: 150px;
   background-color: #d2c2b0;
   border: none;
   color: white;
@@ -28,4 +49,18 @@ button {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+}
+
+h2{
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  text-align: center;
+  position: relative;
+  top: 150px;
+}
+
+html{
+  scroll-behavior: smooth;
 }
