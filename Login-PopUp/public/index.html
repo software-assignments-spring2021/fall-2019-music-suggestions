@@ -12,21 +12,18 @@
 
 
 <div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/" method="post">
 
-
+  <form class="modal-content animate" action="/login">
     <div class="imgcontainer">
     	<h2 style="padding: 30px;text-align: left;"> Sign In</h2>
     </div>
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="username" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
+      <input type="password" placeholder="Enter Password" name="password" required>
       <button type="submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -38,7 +35,6 @@
     </div>
   </form>
 </div>
-
 <script>
 // Get the modal
 var modal = document.getElementById('id01');
@@ -50,6 +46,5 @@ window.onclick = function(event) {
     }
 }
 </script>
-
 </body>
 </html>
