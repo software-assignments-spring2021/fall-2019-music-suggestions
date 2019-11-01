@@ -13,6 +13,9 @@ app.get('/', (req, res)=>{
   res.status(200).send("hi");
 })
 
+app.get('/foo', (req,res)=>{
+  res.send('foo');
+})
 
 app.get('/login', function(req, res){
   let username = req.query.username;
