@@ -104,9 +104,7 @@ onSubmit(e){
   }
 }
 
-export sayHello: function(){
-return 'hello';
-}
+
 
 /*
 module.exports = {
