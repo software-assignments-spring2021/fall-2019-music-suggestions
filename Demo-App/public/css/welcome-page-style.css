@@ -1,0 +1,80 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#section1 {
+  height: 670px;
+  background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
+  background-size: cover;
+  margin: 0px;
+}
+
+#section2 {
+  background-image: url("https://media.giphy.com/media/LOFEhmimtAAZW/giphy.gif");
+  background-size: cover;
+  height: 670px;
+  background-size:100%;
+  margin: 0px;
+}
+
+body {
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+body p{
+  position: relative;
+  top: 150px;
+}
+
+body img{
+  position: relative;
+  top: 150px;
+  max-height: 400px;
+  width: auto;
+}
+
+a{
+  position: relative;
+  top: 150px;
+  color: white;
+  font-size: 16pt;
+}
+
+button {
+  position:relative;
+  top: 150px;
+  background-color: #d2c2b0;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover{
+  background-color: white;
+  color: #d2c2b0;
+}
+
+h2{
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  text-align: center;
+  position: relative;
+  top: 150px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
