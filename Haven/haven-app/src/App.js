@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 //import Navbar from "./components/navbar.component";
 import WelcomePage from "./components/welcomepage.component";
-import SignIn from "./components/sign-in-page.component";
+//import SignIn from "./components/sign-in-page.component";
 //import CreateUser from "./components/create-user.component";
 //import FindUser from "./components/find-user.component";
 //import UpdateUser from "./components/update-user.component";
@@ -15,8 +15,7 @@ function App() {
   return (
 
     <div>
-
-      <SignIn />
+      <WelcomePage />
     </div>
   );
 }

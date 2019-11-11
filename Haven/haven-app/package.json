@@ -36,6 +36,4 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "react-test-renderer": "^16.11.0"
   }
-
-  
 }

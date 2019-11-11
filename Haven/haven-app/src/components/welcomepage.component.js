@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/welcome-page-style.css"
+
 import HavenLogo from "../images/haven-logo.png";
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 export default class UserList extends Component {
   render() {
     return (
       <div>
-
       <div className="main" id="section1">
           <img src= {HavenLogo} />
           <p>Welcome to the Haven.<br />
@@ -20,8 +21,14 @@ export default class UserList extends Component {
             or you are trying to join a band, <br />
             Haven is the platform for you <br />to find and collaborate<br />
             with artists in your area.</h2>
-          <button className="button" onclick="window.location.href = 'index.html';">Explore Artists</button>
-          <button className="button" onclick="window.location.href = 'index.html';">Create Account</button><br />
+          <Link to= "/userlist">
+            <button type = "button">
+              Explore Artists
+            </button>
+          </Link>
+          <Link to= "/sign-in-page.component">
+            <button className="button" onclick="window.location.href = 'index.html';">Create Account</button>
+          </Link>
           {/*a href="#section1">Go back</a*/}
         </div>
 
