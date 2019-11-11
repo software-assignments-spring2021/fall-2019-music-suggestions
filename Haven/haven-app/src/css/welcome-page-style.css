@@ -7,6 +7,12 @@
   background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
   background-size: cover;
   margin: 0px;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  position: relative;
+  text-align: center;
 }
 
 #section2 {
@@ -15,9 +21,15 @@
   height: 670px;
   background-size:100%;
   margin: 0px;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  position: relative;
+  text-align: center;
 }
 
-main-body {
+.main-body {
   color: white;
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
@@ -28,26 +40,31 @@ main-body {
   padding: 0px;
 }
 
-body p{
+#section1 p{
+  position: relative;
+  top: 150px;
+}
+#section2 p{
   position: relative;
   top: 150px;
 }
 
-body img{
+
+#section1 img{
   position: relative;
   top: 150px;
   max-height: 400px;
   width: auto;
 }
 
-a{
+.main a{
   position: relative;
   top: 150px;
   color: white;
   font-size: 16pt;
 }
 
-button {
+.main button {
   position:relative;
   top: 150px;
   background-color: #d2c2b0;
@@ -60,12 +77,12 @@ button {
   border-radius: 10px;
 }
 
-.button:hover{
+.main .button:hover{
   background-color: white;
   color: #d2c2b0;
 }
 
-h2{
+.main h2{
   color: white;
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
@@ -75,6 +92,8 @@ h2{
   top: 150px;
 }
 
-html{
+
+
+.main-body html{
   scroll-behavior: smooth;
 }
