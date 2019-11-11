@@ -8,7 +8,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 export default class UserList extends Component {
   render() {
     return (
-      <div>
+      <div className="main-body">
       <div className="main" id="section1">
           <img src= {HavenLogo} />
           <p>Welcome to the Haven.<br />
@@ -26,7 +26,7 @@ export default class UserList extends Component {
               Explore Artists
             </button>
           </Link>
-          <Link to= "/sign-in-page.component">
+          <Link to= "/signin">
             <button className="button" onclick="window.location.href = 'index.html';">Create Account</button>
           </Link>
           {/*a href="#section1">Go back</a*/}

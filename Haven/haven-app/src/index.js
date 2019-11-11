@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import WelcomePage from './components/welcomepage.component';
 import SignIn from './components/sign-in-page.component';
-import UserList from './components/sign-in-page.component';
+import UserList from './components/user-list.component';
 
 const routing = (
   <Router>
