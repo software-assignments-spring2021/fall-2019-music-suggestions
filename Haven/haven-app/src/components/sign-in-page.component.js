@@ -6,7 +6,7 @@ import HavenLogo from "../images/haven-logo.png";
 export default class SignIn extends Component {
   render() {
     return (
-      <div>
+      <div className="signin-body" id="section3">
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content />

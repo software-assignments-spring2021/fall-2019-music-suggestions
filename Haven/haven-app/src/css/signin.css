@@ -4,7 +4,14 @@ body {
   height: 100%;
 }
 
-body {
+#section3 {
+  height: 670px;
+  background-image: url("https://media.giphy.com/media/d97OPMEimWGBi/source.gif");
+  background-size: cover;
+  margin: 0px;
+}
+
+signin-body {
   background-image: url("https://media.giphy.com/media/d97OPMEimWGBi/source.gif");
   background-size: cover;
   display: -ms-flexbox;
