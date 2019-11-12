@@ -13,7 +13,7 @@ export default class UserList extends Component {
       <div className="main" id="section1">
           <img src= {HavenLogo} />
           <p>Welcome to the Haven.<br />
-            Haven is a place for you to <br /> find locally sourced artists.<br />
+            Haven is your place to <br /> find local artists!<br />
             Get started now.</p><br />
           <br /><button className="button" onclick="window.location.href = '#section2';">See More
           </button></div>
@@ -22,7 +22,7 @@ export default class UserList extends Component {
             or you are trying to join a band, <br />
             Haven is the platform for you <br />to find and collaborate<br />
             with artists in your area.</h2>
-          <Link to= "/userlist">
+          <Link to= "/browse">
             <button className="button" type = "button">
               Explore Artists
             </button>
