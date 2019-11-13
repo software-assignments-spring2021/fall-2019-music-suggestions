@@ -5,13 +5,14 @@ import './index.css';
 import App from './App';
 import WelcomePage from './components/welcomepage.component';
 import SignIn from './components/sign-in-page.component';
-import UserList from './components/user-list.component';
+import FindUser from './components/find-user.component';
+//import UserList from './components/user-list.component';
 
 const routing = (
   <Router>
     <Route exact path = "/" component = {WelcomePage} />
     <Route path="/signin" component = {SignIn}/>
-    <Route path="/userlist" component = {UserList}/>
+    <Route path="/browse" component = {App}/>
   </Router>
 )
 
