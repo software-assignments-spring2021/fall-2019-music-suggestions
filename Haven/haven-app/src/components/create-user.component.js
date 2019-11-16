@@ -16,7 +16,9 @@ export default class CreateUser extends Component {
     this.state = {
       email: '',
       username: '',
-      password: ''
+      password: '',
+      user_type: '',
+      genre: ''
     }
   }
 
@@ -41,6 +43,7 @@ export default class CreateUser extends Component {
     })
   }
 
+
   onChangeUserType(e){
     this.setState({
       user_type: e.target.value
@@ -54,15 +57,17 @@ export default class CreateUser extends Component {
   }
 
 
+
 onSubmit(e){
   e.preventDefault();
+}
 
   const user = {
     email: this.state.email,
     username: this.state.username,
     password: this.state.password,
     user_type: this.state.user_type,
-    genre: this.state.genre,
+    genre: this.state.genre
   }
 
   console.log(user);
@@ -76,7 +81,7 @@ onSubmit(e){
     username:'',
     password: '',
     user_type:'',
-    genre:'',
+    genre:''
   })
 }
 
