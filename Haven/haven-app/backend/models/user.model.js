@@ -23,6 +23,20 @@ const userSchema = new Schema({
     trim: true,
     minlength: 6
   },
+  user_type: {
+    type: String,
+    required: true,
+    unique: false,
+    trim: true,
+    minlength: 6
+  },
+  genre: {
+    type: String,
+    required: true,
+    unique: false,
+    trim: true,
+    minlength: 6
+  },
 }, {
   timestamps: true,
 });
