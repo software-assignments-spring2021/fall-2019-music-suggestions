@@ -9,6 +9,8 @@ export default class CreateUser extends Component {
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
+    this.onChangeUserType = this.onChangeUserType.bind(this);
+    this.onChangeGenre = this.onChangeGenre.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -17,8 +19,6 @@ export default class CreateUser extends Component {
       password: ''
     }
   }
-
-
 
 //text box input setting for email
   onChangeEmail(e){
@@ -41,13 +41,28 @@ export default class CreateUser extends Component {
     })
   }
 
+  onChangeUserType(e){
+    this.setState({
+      user_type: e.target.value
+    })
+  }
+
+  onChangeGenre(e){
+    this.setState({
+      genre: e.target.value
+    })
+  }
+
+
 onSubmit(e){
   e.preventDefault();
 
   const user = {
     email: this.state.email,
     username: this.state.username,
-    password: this.state.password
+    password: this.state.password,
+    user_type: this.state.user_type,
+    genre: this.state.genre,
   }
 
   console.log(user);
@@ -59,7 +74,9 @@ onSubmit(e){
   this.setState({
     email: '',
     username:'',
-    password: ''
+    password: '',
+    user_type:'',
+    genre:'',
   })
 }
 
@@ -95,6 +112,26 @@ onSubmit(e){
                       onChange={this.onChangePassword}
                       />
                 </div>
+                {/*// SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX FOR CONSUMER AND ARTIST*/}
+                <div className="form-group">
+                  <label>User Type: </label>
+                  <input  type="text"
+                      required
+                      className="form-control"
+                      value={this.state.user_type}
+                      onChange={this.onChangeUserType}
+                      />
+                </div>
+                {/* SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX*/}
+                <div className="form-group">
+                  <label>Genre Type: </label>
+                  <input  type="text"
+                      required
+                      className="form-control"
+                      value={this.state.genre}
+                      onChange={this.onChangeGenre}
+                      />
+                </div>
                 <div className="form-group">
                   <input type="submit" value="Create User" className="btn btn-primary" />
                 </div>
@@ -103,13 +140,3 @@ onSubmit(e){
     )
   }
 }
-
-
-
-/*
-module.exports = {
-  sayHello: function(){
-  return 'hello';
-  }
-}
-*/
