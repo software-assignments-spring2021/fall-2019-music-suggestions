@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "../css/create-user.css"
 
 
 export default class CreateUser extends Component {
@@ -60,7 +61,7 @@ export default class CreateUser extends Component {
 
 onSubmit(e){
   e.preventDefault();
-}
+
 
   const user = {
     email: this.state.email,
@@ -87,7 +88,9 @@ onSubmit(e){
 
   render() {
     return (
-      <div>
+      
+      <div id="signin">
+          <div>
               <h3>Create New User</h3>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
@@ -142,6 +145,8 @@ onSubmit(e){
                 </div>
               </form>
             </div>
+          </div>
+
     )
   }
 }

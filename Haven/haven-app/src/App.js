@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Navbar from "./components/navbar.component";
 import Browse from "./components/browse-artists.component";
-import BrowsePhotography from "./components/browse-photography.component";
+
 //import WelcomePage from "./components/welcomepage.component";
 //import SignIn from "./components/sign-in-page.component";
 import CreateUser from "./components/create-user.component";
@@ -22,7 +22,7 @@ function App() {
       <Navbar/>
       <br/>
       <Route path="/browse" exact component = {Browse} />
-      <Route path="/browse/photography" component = {BrowsePhotography} />
+
       <Route path="/createUser" component = {CreateUser}/>
     </Router>
 
