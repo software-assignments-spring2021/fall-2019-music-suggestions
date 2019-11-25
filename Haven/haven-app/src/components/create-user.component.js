@@ -123,12 +123,14 @@ onSubmit(e){
                 {/*// SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX FOR CONSUMER AND ARTIST*/}
                 <div className="form-group">
                   <label>User Type: </label>
-                  <input  type="text"
+                  <select type="text"
                       required
                       className="form-control"
                       value={this.state.user_type}
-                      onChange={this.onChangeUserType}
-                      />
+                      onChange={this.onChangeUserType}>
+                    <option value="buyer">Buyer</option>
+                    <option value="artist">Artist</option>
+                  </select>
                 </div>
                 {/* SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX*/}
                 <div className="form-group">
