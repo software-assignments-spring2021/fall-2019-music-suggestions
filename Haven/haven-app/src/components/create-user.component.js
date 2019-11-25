@@ -88,7 +88,7 @@ onSubmit(e){
 
   render() {
     return (
-      
+
       <div id="signin">
           <div>
               <h3>Create New User</h3>
@@ -133,12 +133,18 @@ onSubmit(e){
                 {/* SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX*/}
                 <div className="form-group">
                   <label>Genre Type: </label>
-                  <input  type="text"
+                  <select type="text"
                       required
                       className="form-control"
                       value={this.state.genre}
-                      onChange={this.onChangeGenre}
-                      />
+                      onChange={this.onChangeGenre}>
+                    <option value="photographer">Photographer</option>
+                    <option value="musician">Musician</option>
+                    <option value="cook">Cook</option>
+                    <option value="dancer">Dancer</option>
+                    <option value="dj">DJ</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
                 <div className="form-group">
                   <input type="submit" value="Create User" className="btn btn-primary" />
