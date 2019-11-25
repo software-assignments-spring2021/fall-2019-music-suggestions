@@ -2,5 +2,17 @@
 
   margin-left: 40px;
   margin-right: 40px;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
 
+.form-control {
+  flex-basis: 30%;
+  align-items: baseline;
 }
