@@ -2,5 +2,12 @@
 
   margin-left: 40px;
   margin-right: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
+.form-control{
+  width: 100%;
+  justify-content: center;
 }
