@@ -7,6 +7,7 @@ import WelcomePage from './components/welcomepage.component';
 import SignIn from './components/sign-in-page.component';
 import FindUser from './components/find-user.component';
 //import UserList from './components/user-list.component';
+import UpdateUser from './components/update-user.component.js'
 
 const routing = (
   <Router>
@@ -14,6 +15,7 @@ const routing = (
     <Route path="/signin" component = {SignIn}/>
     <Route path="/browse" component = {App}/>
     <Route path="/all" component = {FindUser}/>
+    <Route path="/edit/:id" component={UpdateUser} />
   </Router>
 )
 

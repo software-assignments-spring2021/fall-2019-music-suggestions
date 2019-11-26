@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const Exercise = props => (
+const User = props => (
   <tr>
+    <td>{props.user._id}</td>
     <td>{props.user.email}</td>
     <td>{props.user.username}</td>
     <td>{props.user.password}</td>
     <td>{props.user.user_type}</td>
-    <td>{props.user.genre}</td>    
+    <td>{props.user.genre}</td>
+    <td>
+      <Link to={"/edit/"+props.user._id}>edit</Link>
+    </td>
   </tr>
 )
 
@@ -32,11 +36,9 @@ export default class FindUser extends Component {
 
   userList() {
     return this.state.users.map(currentUser => {
-      return <Exercise user={currentUser} key={currentUser._id}/>;
+      return <User user={currentUser} key={currentUser._id}/>;
     })
   }
-
-
 
   render() {
     return (
