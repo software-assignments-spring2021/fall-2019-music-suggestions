@@ -14,29 +14,30 @@ const userSchema = new Schema({
     required: true,
     unique: true,
     trim: true,
-    minlength: 3
+    minlength: 1
   },
   password: {
     type: String,
     required: true,
     unique: false,
     trim: true,
-    minlength: 6
+    minlength: 1
   },
   user_type: {
     type: String,
     required: true,
     unique: false,
     trim: true,
-    minlength: 6
+    minlength: 1
   },
   genre: {
     type: String,
     required: true,
     unique: false,
     trim: true,
-    minlength: 6
+    minlength: 1
   },
+  
 }, {
   timestamps: true,
 });

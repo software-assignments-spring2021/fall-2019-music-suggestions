@@ -22,6 +22,24 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/login').post((req, res) => {
+
+  const username = req.body.username;
+  const password = req.body.password;
+
+  User.findOne({username: username, password: password}, function(err, user){
+    if(err){
+      return res.status(400).json('Error: ' + err);
+    }
+    if(!user){
+      return res.status(404).json('Error: ' + err);
+    }
+    return res.status(200).send();
+  });
+
+
+});
+
 router.route('/:id').get((req, res) => {
   User.findById(req.params.id)
     .then(users => res.json(users))
@@ -40,7 +58,7 @@ router.route('/update/:id').post((req, res) => {
       users.email = req.body.email;
       users.username = req.body.username;
       users.password = req.body.password;
-      
+
 
       users.save()
         .then(() => res.json('User updated.'))
