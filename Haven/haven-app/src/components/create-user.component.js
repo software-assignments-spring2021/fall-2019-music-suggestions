@@ -2,6 +2,43 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import "../css/create-user.css"
 
+class NewUserFactory {
+  constructor (username, userType){
+    this.createUser = function(userType){
+      let user;
+      if (userType == 'Artist'){
+        user = new Artist(username);
+      }
+      else if(userType == 'Buyer'){
+        user = new Buyer(username);
+      }
+      user.type = function(){
+        return 'The user is a ${this._type} ';
+      }
+    }
+  }
+}
+
+class Artist extends NewUser{
+  constructor(username){
+    this._type = 'Artist';
+    this.username  = username;
+  }
+  addDescription(description){
+    this.description = description;
+  }
+  addSkills(skills){
+    this.skills = skills;
+  }
+}
+
+class Buyer{
+  constructor(username){
+    this._type = 'Buyer';
+    this.username  = username;
+  }
+}
+
 
 export default class CreateUser extends Component {
   constructor(props){
