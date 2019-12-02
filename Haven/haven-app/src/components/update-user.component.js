@@ -55,52 +55,44 @@ export default class UpdateUser extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const exercise = {
+    const user = {
       username: this.state.username,
       password: this.state.password
     }
 
-    console.log(exercise);
+    console.log(user);
 
-    axios.post('http://localhost:5000/users/update/' + this.props.match.params.id, exercise)
+    axios.post('http://localhost:5000/users/update/' + this.props.match.params.id, user)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/all';
   }
 
   render() {
     return (
     <div>
-      <h3>Edit Exercise Log</h3>
+      <h3>Edit User Log</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
           <label>Username: </label>
-          <select ref="userInput"
+            <input type="text"
               required
               className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}>
-              {
-                this.state.users.map(function(user) {
-                  return <option
-                    key={user}
-                    value={user}>{user}
-                    </option>;
-                })
-              }
-          </select>
+              value= {this.state.username}
+              onChange={this.onChangeUsername}
+            />
         </div>
         <div className="form-group">
           <label>Password: </label>
-          <input  type="text"
-              required
-              className="form-control"
-              value={this.state.description}
-              onChange={this.onChangePassword}
+            <input type="text"
+                required
+                className="form-control"
+                value={this.state.password}
+                onChange={this.onChangePassword}
               />
         </div>
         <div className="form-group">
-          <input type="submit" value="Edit Exercise Log" className="btn btn-primary" />
+          <input type="submit" value="Edit User Data" className="btn btn-primary" />
         </div>
       </form>
     </div>

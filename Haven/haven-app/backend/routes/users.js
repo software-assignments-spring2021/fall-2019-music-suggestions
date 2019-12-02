@@ -73,10 +73,8 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
   User.findById(req.params.id)
     .then(users => {
-      users.email = req.body.email;
       users.username = req.body.username;
       users.password = req.body.password;
-
 
       users.save()
         .then(() => res.json('User updated.'))
