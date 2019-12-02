@@ -120,7 +120,7 @@ onSubmit(e){
                       onChange={this.onChangePassword}
                       />
                 </div>
-                {/*// SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX FOR CONSUMER AND ARTIST*/}
+                {/*// SWITCHED TO BUTTON!!!!!*/}
                 <div className="form-group">
                   <label>User Type: </label>
                   <select type="text"
@@ -128,11 +128,13 @@ onSubmit(e){
                       className="form-control"
                       value={this.state.user_type}
                       onChange={this.onChangeUserType}>
-                    <option value="buyer">Buyer</option>
-                    <option value="artist">Artist</option>
+
+                    <option value="consumer">Consumer</option>
+                    <option value="serviceprovider">Service Provider</option>
+
                   </select>
                 </div>
-                {/* SWITCH TO BUTTON!!!!! MAKE IT A CHECKBOX*/}
+                {/* SWITCHED TO BUTTON!!!!!*/}
                 <div className="form-group">
                   <label>Genre Type: </label>
                   <select type="text"
