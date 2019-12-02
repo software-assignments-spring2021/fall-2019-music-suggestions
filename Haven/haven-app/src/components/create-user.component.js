@@ -128,8 +128,10 @@ onSubmit(e){
                       className="form-control"
                       value={this.state.user_type}
                       onChange={this.onChangeUserType}>
+
                     <option value="consumer">Consumer</option>
                     <option value="serviceprovider">Service Provider</option>
+
                   </select>
                 </div>
                 {/* SWITCHED TO BUTTON!!!!!*/}
