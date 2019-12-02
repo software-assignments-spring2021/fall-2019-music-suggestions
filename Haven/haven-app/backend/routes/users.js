@@ -15,12 +15,29 @@ router.route('/add').post((req, res) => {
   const user_type = req.body.user_type;
   const genre = req.body.genre;
 
+  //email = email.toLowerCase();
+
+  User.find(
+    {username: username}, (err, previousUser) => {
+      if(err){
+        res.end('Error: Server Error');
+      }
+      else if(previousUser.length > 0){
+        res.end("Error: Username already exists");
+      }
+
+
+
   const newUser = new User({email, username, password, user_type, genre});
+
+  newUser.password = newUser.generateHash(password);
 
   newUser.save()
     .then(() => res.json('User added!'))
     .catch(err => res.status(400).json('Error: ' + err));
+    });
 });
+
 
 router.route('/login').post((req, res) => {
 
@@ -39,6 +56,7 @@ router.route('/login').post((req, res) => {
 
 
 });
+
 
 router.route('/:id').get((req, res) => {
   User.findById(req.params.id)
