@@ -110,7 +110,7 @@ onSubmit(e){
 
       <div id="signin">
           <div>
-              <h3>Create New Profile</h3>
+              <h3 className="create-profile-text">Create New Profile</h3>
               <form onSubmit={this.onSubmit}>
               {/*
                 <div className="form-group">

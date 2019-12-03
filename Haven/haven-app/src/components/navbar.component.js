@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import logo from '../haven-logo.png';
+import logo from '../images/haven-logo.png';
+import "../css/css_gallery/navbar.css"
 
 export default class Navbar extends Component {
 
   render() {
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <Link to="/browse" className="navbar-brand">Haven</Link>
+        <Link to="/browse" className="navbar-brand">
+          <img className="haven-logo" src={ require('../images/haven-logo.png') } />
+        </Link>
         <div className="collpase navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="navbar-item">

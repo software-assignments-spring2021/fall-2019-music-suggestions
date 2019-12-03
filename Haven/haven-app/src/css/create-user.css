@@ -16,3 +16,7 @@
   flex-basis: 30%;
   align-items: baseline;
 }
+
+.create-profile-text{
+  text-align: left !important;
+}
