@@ -19,7 +19,7 @@ class NewUserFactory {
   }
 }
 
-class Artist extends NewUser{
+class Artist extends NewUserFactory{
   constructor(username){
     this._type = 'Artist';
     this.username  = username;
