@@ -10,12 +10,12 @@ const profileSchema = new Schema({
     trim: true,
     minlength: 3
   },
-  password: {
+  display_name:{
     type: String,
     required: true,
-    unique: false,
-    trim: true,
-    minlength: 6
+    unique: true,
+    trim:true,
+    minlength: 5
   },
   user_type: {
     type: String,
@@ -36,6 +36,18 @@ const profileSchema = new Schema({
     required: false,
     unique: false,
     trim: true,
+  },
+  location:{
+    type: String,
+    required: true,
+    unique: false,
+    trim: true,
+  },
+  website_url:{
+    type: Stirng,
+    required: false,
+    unique: false,
+    trim: false
   }
 }, {
   timestamps: true,

@@ -157,7 +157,7 @@ onSubmit(e){
                       onChange={this.onChangePassword}
                       />
                 </div>
-                {/*// SWITCHED TO BUTTON!!!!!*/}
+                {/*// SWITCHED TO BUTTON!!!!!
                 <div className="form-group">
                   <label>User Type: </label>
                   <select type="text"
@@ -171,7 +171,7 @@ onSubmit(e){
 
                   </select>
                 </div>
-                {/* SWITCHED TO BUTTON!!!!!*/}
+                {/* SWITCHED TO BUTTON!!!!!
                 <div className="form-group">
                   <label>Genre Type: </label>
                   <select type="text"
@@ -186,7 +186,7 @@ onSubmit(e){
                     <option value="dj">DJ</option>
                     <option value="other">Other</option>
                   </select>
-                </div>
+                </div>*/}
                 <div className="form-group">
                   <input type="submit" value="Create User" className="btn btn-primary" />
                 </div>
