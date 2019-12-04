@@ -1,0 +1,24 @@
+.No-profile-text{
+  color: black;
+  font-family: "Helvetica", sans-serif;
+  font-size:20pt;
+  line-height: 38px;
+}
+
+.main-body button {
+  position:relative;
+  top: 10px;
+  background-color: #d2c2b0;
+  border: none;
+  color: white;
+  padding: 15px 25px !important;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.main-body .button:hover{
+  background-color: white;
+  color: #d2c2b0;
+}

@@ -43,6 +43,9 @@ export default class Navbar extends Component {
               <li className="nav-item">
                 <Link to="/createProfile" className="nav-link" id="text">Create Profile</Link>
               </li>
+              <li className="nav-item">
+                <Link to="/myProfiles" className="nav-link" id="text">My Profiles</Link>
+              </li>
               {/* Dropdown
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
