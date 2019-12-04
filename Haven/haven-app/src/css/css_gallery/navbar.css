@@ -1,4 +1,15 @@
 .haven-logo{
   width: 110px;
   padding:0px;
+
+}
+
+#nav {
+   background-color: #333;
+
+ }
+
+
+#text {
+  color: white;
 }
