@@ -13,8 +13,9 @@ router.route('/add').post((req, res) => {
   const email = req.body.email;
   const username = req.body.username;
   const password = req.body.password;
-  const user_type = req.body.user_type;
-  const genre = req.body.genre;
+
+  //const user_type = req.body.user_type;
+  //const genre = req.body.genre;
 
   //email = email.toLowerCase();
 
@@ -29,7 +30,7 @@ router.route('/add').post((req, res) => {
 
 
 
-  const newUser = new User({email, username, password, user_type, genre});
+  const newUser = new User({email, username, password});
 
   newUser.password = newUser.generateHash(password);
 

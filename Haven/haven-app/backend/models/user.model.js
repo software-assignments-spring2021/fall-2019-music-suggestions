@@ -24,20 +24,6 @@ const userSchema = new Schema({
     trim: true,
     minlength: 1
   },
-  user_type: {
-    type: String,
-    required: false,
-    unique: false,
-    trim: true,
-    minlength: 1
-  },
-  genre: {
-    type: String,
-    required: false,
-    unique: false,
-    trim: true,
-    minlength: 1
-  },
   isDeleted: {
     type: Boolean,
     default: false
