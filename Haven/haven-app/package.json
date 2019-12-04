@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/textfield": "^4.0.0",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
@@ -12,8 +13,10 @@
     "popper.js": "^1.16.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-native": "^0.61.5",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.14"
   },
   "scripts": {
     "start": "react-scripts start",
