@@ -9,6 +9,7 @@ import FindUser from './components/find-user.component';
 //import UserList from './components/user-list.component';
 import UpdateUser from './components/update-user.component.js'
 import UserProfile from './components/user-profile.component.js'
+import Gallery from "./components/gallery.component.js";
 
 const routing = (
   <Router>
@@ -18,6 +19,7 @@ const routing = (
     <Route path="/all" component = {FindUser}/>
     <Route path="/edit/:id" component={UpdateUser} />
     <Route path="/createProfile" component={UserProfile}/>
+    <Route path="/gallery" component = {Gallery}/>
   </Router>
 )
 

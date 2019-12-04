@@ -11,6 +11,8 @@ import Browse from "./components/browse-artists.component";
 //import SignIn from "./components/sign-in-page.component";
 import CreateUser from "./components/create-user.component";
 import UserProfile from './components/user-profile.component.js';
+import Gallery from "./components/gallery.component.js";
+
 //import FindUser from "./components/find-user.component";
 //import UpdateUser from "./components/update-user.component";
 //import DeleteUser from "./components/delete-user.component";
@@ -23,7 +25,7 @@ function App() {
       <Navbar/>
       <br/>
       <Route path="/browse" exact component = {Browse} />
-
+      <Route path="/gallery" component = {Gallery}/>
       <Route path="/createUser" component = {CreateUser}/>
       <Route path="/createProfile" component={UserProfile}/>
     </Router>
