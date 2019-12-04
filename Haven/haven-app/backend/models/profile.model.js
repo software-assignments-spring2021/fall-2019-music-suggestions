@@ -3,33 +3,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const profileSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-    minlength: 3
-  },
   display_name:{
     type: String,
     required: false,
     unique: true,
     trim:true,
-    minlength: 5
+    minlength: 1
   },
   user_type: {
     type: String,
     required: false,
     unique: false,
     trim: true,
-    minlength: 6
+    minlength: 1
   },
   genre: {
     type: String,
     required: false,
     unique: false,
     trim: true,
-    minlength: 6
+    minlength: 1
   },
   description:{
     type: String,

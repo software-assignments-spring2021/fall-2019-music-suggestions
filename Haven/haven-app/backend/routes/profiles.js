@@ -9,7 +9,7 @@ router.route('/').get((req, res) => {
 
 
 router.route('/add').post((req, res) => {
-  const username = req.body.username;
+
   const display_name = req.body.display_name;
   const user_type = req.body.user_type;
   const genre = req.body.genre;
@@ -18,7 +18,7 @@ router.route('/add').post((req, res) => {
   const website_url = req.body.website_url;
 
 
-  const newProfile = new Profile({username, display_name, user_type, genre, description, location, website_url});
+  const newProfile = new Profile({display_name, user_type, genre, description, location, website_url});
 
 
   newProfile.save()
@@ -42,7 +42,6 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
   Profile.findById(req.params.id)
     .then(profile => {
-      profile.username = req.body.username;
       profile.display_name = req.body.display_name;
       profile.user_type = req.body.user_type;
       profile.genre = req.body.genre;

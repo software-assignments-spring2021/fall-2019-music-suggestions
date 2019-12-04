@@ -6,7 +6,7 @@ export default class UserProfile extends Component {
   constructor(props){
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+
     this.onChangeDisplay_name = this.onChangeDisplay_name.bind(this);
     this.onChangeGenre = this.onChangeGenre.bind(this);
     this.onChangeUserType = this.onChangeUserType.bind(this);
@@ -19,7 +19,6 @@ export default class UserProfile extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
       display_name: '',
       user_type: '',
       genre: '',
@@ -30,12 +29,8 @@ export default class UserProfile extends Component {
   }
 
 
-  //text box input setting for username
-  onChangeUsername(e){
-    this.setState({
-      username: e.target.value
-    })
-  }
+
+
 
   onChangeDisplay_name(e){
     this.setState({
@@ -78,8 +73,7 @@ onSubmit(e){
   e.preventDefault();
 
 
-  const user = {
-    username: this.state.username,
+  const profile = {
     display_name: this.state.display_name,
     user_type: this.state.user_type,
     genre: this.state.genre,
@@ -88,14 +82,13 @@ onSubmit(e){
     website_url: this.state.website_url
   }
 
-  console.log(user);
+  console.log(profile);
 
-  //window.location = '/';
-  axios.post('http://localhost:5000/profile/add', user)
+
+  axios.post('http://localhost:5000/profiles/add', profile)
   .then(res => console.log(res.data));
 
   this.setState({
-    username: '',
     display_name: '',
     user_type: '',
     genre: '',
@@ -112,16 +105,7 @@ onSubmit(e){
           <div>
               <h3 className="create-profile-text">Create New Profile</h3>
               <form onSubmit={this.onSubmit}>
-              {/*
-                <div className="form-group">
-                  <label>Username: </label>
-                  <input  type="text"
-                      required
-                      className="form-control"
-                      value={this.state.username}
-                      onChange={this.onChangeUsername}
-                      />
-                </div>*/}
+
                 <div className="form-group">
                   <label>Display Name: </label>
                   <input  type="text"
@@ -196,7 +180,7 @@ onSubmit(e){
                       />
                 </div>
                 <div className="form-group">
-                  <input type="submit" value="Create User" className="btn btn-primary" />
+                  <input type="submit" value="Create Profile" className="btn btn-primary" />
                 </div>
               </form>
             </div>
