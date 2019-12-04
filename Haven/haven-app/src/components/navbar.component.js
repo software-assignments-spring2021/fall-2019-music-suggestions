@@ -26,7 +26,7 @@ export default class Navbar extends Component {
         {/*Navbar*/}
         <nav className="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
           {/* Navbar brand */}
-          <img className="haven-logo" src={ require('../images/haven-logo.png') } />
+          <Link to="/browse"><img className="haven-logo" src={ require('../images/haven-logo.png') } /></Link>
           {/* <a className="navbar-brand" href="#">Haven</a> */}
           {/* Collapse button */}
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon" /></button>

@@ -1,5 +1,13 @@
 * {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.HavenText-Welcome{
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 30pt;
+  line-height: 38px;
 }
 
 #section1 {
@@ -66,11 +74,11 @@
 
 .main button {
   position:relative;
-  top: 150px;
+  top: 125px;
   background-color: #d2c2b0;
   border: none;
   color: white;
-  padding: 15px 25px;
+  padding: 15px 25px !important;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
@@ -86,14 +94,19 @@
   color: white;
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
-  font-size: 20pt;
+  font-size: 30pt;
+  line-height: 38px;
   text-align: center;
   position: relative;
-  top: 150px;
+  top: 180px;
 }
 
 
 
-.main-body html{
-  scroll-behavior: smooth;
+.wholesection{
+  scroll-behavior: smooth !important;
+}
+
+button.button{
+  margin: 30px !important;
 }
