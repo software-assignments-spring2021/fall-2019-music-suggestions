@@ -12,21 +12,21 @@ const profileSchema = new Schema({
   },
   display_name:{
     type: String,
-    required: true,
+    required: false,
     unique: true,
     trim:true,
     minlength: 5
   },
   user_type: {
     type: String,
-    required: true,
+    required: false,
     unique: false,
     trim: true,
     minlength: 6
   },
   genre: {
     type: String,
-    required: true,
+    required: false,
     unique: false,
     trim: true,
     minlength: 6
@@ -39,12 +39,12 @@ const profileSchema = new Schema({
   },
   location:{
     type: String,
-    required: true,
+    required: false,
     unique: false,
     trim: true,
   },
   website_url:{
-    type: Stirng,
+    type: String,
     required: false,
     unique: false,
     trim: false

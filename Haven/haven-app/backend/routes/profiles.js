@@ -17,22 +17,13 @@ router.route('/add').post((req, res) => {
   const location = req.body.location;
   const website_url = req.body.website_url;
 
-  Profile.find(
-    {username: username}, (err, previousUser) => {
-      if(err){
-        res.end('Error: Server Error');
-      }
-      else if(previousUser.length > 0){
-        // res.end("Error: Username already exists");
-      }
 
-  const newProfile = new Profile({username, user_type, genre, description, location});
+  const newProfile = new Profile({username, display_name, user_type, genre, description, location, website_url});
 
 
   newProfile.save()
     .then(() => res.json('Profile added!'))
     .catch(err => res.status(400).json('Error: ' + err));
-    });
 });
 
 
