@@ -3,17 +3,38 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const User = props => (
-  <tr>
-    <td>{props.user._id}</td>
-    <td>{props.user.email}</td>
-    <td>{props.user.username}</td>
-    <td>{props.user.password}</td>
-    <td>{props.user.user_type}</td>
-    <td>{props.user.genre}</td>
-    <td>
-      <Link to={"/edit/"+props.user._id}>edit</Link>
-    </td>
-  </tr>
+
+    <div className="card-deck" style={{margin: '10px'}}>
+      {/* Card */}
+      <div className="card mb-4">
+        {/* Card image */}
+        <div className="view view-cascade overlay">
+          <img className="card-img-top" src="leena.jpg" alt="Card image cap" />
+          <a>
+          <div className="mask rgba-white-slight" />
+          </a>
+        </div>
+    <div className="card-body card-body-cascade text-center">
+      {/* Title */}
+      <h4 className="card-title"><strong>{props.user.email}</strong></h4>
+      {/* Subtitle */}
+      <h6 className="font-weight-bold indigo-text py-2">{props.user.username}</h6>
+      {/* Text */}
+      <p className="card-text">{props.user.user_type} </p>
+      {/* Facebook */}
+      <a type="button" className="btn-floating btn-small btn-fb"><i className="fab fa-facebook-f" /></a>
+      {/* Twitter */}
+      <a type="button" className="btn-floating btn-small btn-tw"><i className="fab fa-twitter" /></a>
+      {/* Google + */}
+      <a type="button" className="btn-floating btn-small btn-dribbble"><i className="fab fa-dribbble" /></a>
+    </div>
+    <div className="card-footer text-muted text-center">
+      2 days ago
+    </div>
+  </div>
+  </div>
+
+
 )
 
 export default class FindUser extends Component {
@@ -43,11 +64,11 @@ export default class FindUser extends Component {
   render() {
     return (
       <div>
-        <table>
-          <tbody>
+
+
             { this.userList() }
-          </tbody>
-        </table>
+
+
       </div>
     )
   }
