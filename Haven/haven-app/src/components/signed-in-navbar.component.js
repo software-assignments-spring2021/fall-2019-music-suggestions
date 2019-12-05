@@ -6,6 +6,8 @@ import "../css/css_gallery/navbar.css"
 export default class Navbar extends Component {
 
   render() {
+    const user = false;
+
     return (
 
       <div id="nav">
@@ -24,6 +26,7 @@ export default class Navbar extends Component {
         {/* Start your project here*/}
 
         {/*Navbar*/}
+
         <nav className="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
           {/* Navbar brand */}
           <Link to="/browse"><img className="haven-logo" src={ require('../images/haven-logo.png') } /></Link>
@@ -37,9 +40,10 @@ export default class Navbar extends Component {
               <li className="nav-item active">
               <Link to="/gallery" className="nav-link" id="text">Explore</Link>
               </li>
-              <li className="nav-item active">
-              <Link to="/createUser" className="nav-link" id="text">Sign Up</Link>
-              </li>
+
+              
+
+
               <li className="nav-item">
                 <Link to="/createProfile" className="nav-link" id="text">Create Profile</Link>
               </li>
