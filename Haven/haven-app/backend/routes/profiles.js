@@ -1,6 +1,7 @@
 const router = require('express').Router();
 let Profile = require('../models/profile.model');
 
+
 router.route('/').get((req, res) => {
   Profile.find()
     .then(profile => res.json(profile))
