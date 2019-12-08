@@ -13,7 +13,7 @@ export default class UserProfile extends Component {
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeWebsite_url = this.onChangeWebsite_url.bind(this);
-
+    this.onChangeProfileImage = this.onChangeProfileImage.bind(this);
 
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -24,7 +24,8 @@ export default class UserProfile extends Component {
       genre: '',
       description: '',
       location: '',
-      website_url: ''
+      website_url: '',
+      profileImage: null
     }
   }
 
@@ -68,6 +69,11 @@ export default class UserProfile extends Component {
     })
   }
 
+  onChangeProfileImage(e){
+    this.setState({
+      profileImage: e.target.files[0]
+    })
+  }
 
 onSubmit(e){
   e.preventDefault();
@@ -79,7 +85,8 @@ onSubmit(e){
     genre: this.state.genre,
     description: this.state.description,
     location: this.state.location,
-    website_url: this.state.website_url
+    website_url: this.state.website_url,
+    profileImage: this.state.profileImage
   }
 
   console.log(profile);
@@ -94,7 +101,8 @@ onSubmit(e){
     genre: '',
     description: '',
     location: '',
-    website_url: ''
+    website_url: '',
+    profileImage: null
   })
 }
 
@@ -178,6 +186,13 @@ onSubmit(e){
                       value={this.state.website_url}
                       onChange={this.onChangeWebsite_url}
                       />
+                </div>
+
+                <div className="form-group">
+                <label>Profile Image Upload: </label>
+                <div class="file-upload-wrapper">
+                <input type="file" id="input-file-now" class="file-upload" />
+                </div>
                 </div>
                 <div className="form-group">
                   <input type="submit" value="Create Profile" className="btn btn-primary" />
