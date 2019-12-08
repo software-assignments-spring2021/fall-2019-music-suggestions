@@ -20,7 +20,7 @@ import MyProfiles from "./components/myprofiles.component.js";
 //import DeleteUser from "./components/delete-user.component";
 
 function App() {
-  const user = false;
+  const user = true;
   if(user){
   return (
 

@@ -1,7 +1,35 @@
 const router = require('express').Router();
+const multer = require('multer');
+const storage = multer.diskStorage({
+  destination: function(req, file, cb){
+    cb(null, './uploads/');
+  },
+  filename: function(req, file, cb){
+    cb(null, file.originalname);
+  }
+});
+const fileFilter = (req,file,cb) => {
+
+  if(file.mimetype === 'image/jpeg' || file.mimetype === 'image/png'){
+    //accept
+    cb(null, true);
+  }
+  else{
+    //reject
+    cb(null, false);
+  }
+};
+
+const upload = multer({
+  storage: storage,
+  limits: {
+  fileSize: 1024 * 1024 * 5
+  },
+  fileFilter: fileFilter
+});
 let Profile = require('../models/profile.model');
 
-
+//routes
 router.route('/').get((req, res) => {
   Profile.find()
     .then(profile => res.json(profile))
@@ -9,18 +37,17 @@ router.route('/').get((req, res) => {
 });
 
 
-router.route('/add').post((req, res) => {
-
+router.route('/add').post(upload.single('profileImage'), (req, res) => {
+  console.log(req.file);
   const display_name = req.body.display_name;
   const user_type = req.body.user_type;
   const genre = req.body.genre;
   const description = req.body.description;
   const location = req.body.location;
   const website_url = req.body.website_url;
+  const profileImage = req.file.path
 
-
-  const newProfile = new Profile({display_name, user_type, genre, description, location, website_url});
-
+  const newProfile = new Profile({display_name, user_type, genre, description, location, website_url, profileImage});
 
   newProfile.save()
     .then(() => res.json('Profile added!'))
@@ -40,7 +67,7 @@ router.route('/:id').delete((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/update/:id').post((req, res) => {
+router.route('/update/:id').post(upload.single('profileImage'), (req, res) => {
   Profile.findById(req.params.id)
     .then(profile => {
       profile.display_name = req.body.display_name;
@@ -49,6 +76,7 @@ router.route('/update/:id').post((req, res) => {
       profile.description = req.body.description;
       profile.location = req.body.location;
       profile.website_url = req.body.website_url;
+      profile.profileImage = req.file.path;
 
       users.save()
         .then(() => res.json('Profile updated.'))

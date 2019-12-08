@@ -41,7 +41,12 @@ const profileSchema = new Schema({
     required: false,
     unique: false,
     trim: false
+  },
+  profileImage:{
+    type:String,
+    required:false
   }
+
 }, {
   timestamps: true,
 });

@@ -6,7 +6,7 @@ import "../css/css_gallery/navbar.css"
 export default class Navbar extends Component {
 
   render() {
-    const user = false;
+    const user = true;
 
     return (
 
@@ -41,7 +41,7 @@ export default class Navbar extends Component {
               <Link to="/gallery" className="nav-link" id="text">Explore</Link>
               </li>
 
-              
+
 
 
               <li className="nav-item">
