@@ -1,6 +1,8 @@
 const router = require('express').Router();
 let User = require('../models/user.model');
 let UserSession = require('../models/userSession.model');
+const jwt = require('jsonwebtoken');
+require('dotenv').config({ path: '../nodemon.json' });
 
 router.route('/').get((req, res) => {
   User.find()
@@ -13,6 +15,8 @@ router.route('/add').post((req, res) => {
   const email = req.body.email;
   const username = req.body.username;
   const password = req.body.password;
+
+  //
 
   //const user_type = req.body.user_type;
   //const genre = req.body.genre;
@@ -71,7 +75,7 @@ router.route('/login').post((req, res) => {
     */
 
     //create userSession
-    const userSession = new UserSession();
+    /* const userSession = new UserSession();
     userSession.userId = users._id;
     userSession.save((err, doc) => {
       if(err){
@@ -82,13 +86,27 @@ router.route('/login').post((req, res) => {
         message: 'Valid Signin!',
         token: doc._id
       });
+    });*/
+    const web_token = jwt.sign({
+        username: users.username,
+        userId: users._id
+    },
+    /*process.env.JWT_KEY*/ "MusicSuggestions",
+    {
+      expiresIn: "1h"
+    });
+
+    return res.status(200).send({
+      success: true,
+      message: 'Valid Signin!',
+      token: web_token
     });
 
   });
 
 });
 
-router.route('/verify').get((req,res, next) => {
+/*router.route('/verify').get((req,res, next) => {
   // Get the token
     const { query } = req;
     const { token } = query;
@@ -122,7 +140,9 @@ router.route('/verify').get((req,res, next) => {
 
   });
 });
+*/
 
+/*
 router.route('/logout').get((req,res, next) => {
   // Get the token
     const { query } = req;
@@ -172,7 +192,7 @@ router.route('/logout').get((req,res, next) => {
   });
 
 });
-
+*/
 
 
 
