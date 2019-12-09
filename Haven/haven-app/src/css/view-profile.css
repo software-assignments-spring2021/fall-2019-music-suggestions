@@ -32,6 +32,8 @@ p{
   left: -250px;
   padding: 10px;
   margin: 2px;
+  background: white;
+  outline:none;
 }
 
 .workPic{
@@ -42,4 +44,36 @@ p{
   margin-top: 110px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook-f {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fab fa-dribbble{
+  background: black;
+  color:white;
 }
