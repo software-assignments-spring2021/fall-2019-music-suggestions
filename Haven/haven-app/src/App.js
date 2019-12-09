@@ -14,6 +14,7 @@ import CreateUser from "./components/create-user.component";
 import UserProfile from './components/user-profile.component.js';
 import Gallery from "./components/gallery.component.js";
 import MyProfiles from "./components/myprofiles.component.js";
+import viewProfile from "./components/view-profile.component.js";
 
 //import FindUser from "./components/find-user.component";
 //import UpdateUser from "./components/update-user.component";
@@ -32,6 +33,7 @@ function App() {
       <Route path="/gallery" component = {Gallery}/>
       <Route path="/createProfile" component={UserProfile}/>
       <Route path="/myProfiles" component={MyProfiles}/>
+      <Route path="/viewProfile" component={viewProfile}/>
     </Router>
 
   );

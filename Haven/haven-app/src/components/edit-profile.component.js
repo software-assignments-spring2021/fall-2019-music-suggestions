@@ -116,7 +116,7 @@ onSubmit(e){
 
   axios.post('http://localhost:5000/profiles/update' + this.props.match.params.id, profile)
   .then(res => console.log(res.data));
-  
+
     window.location = '/all';
 
   render() {
