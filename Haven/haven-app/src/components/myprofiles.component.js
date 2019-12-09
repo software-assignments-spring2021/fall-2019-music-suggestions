@@ -9,6 +9,11 @@ export default class MyProfiles extends Component {
       <div id="wholesection">
       <div className="main-body">
           <h2 className="No-profile-text"> You currently have no profiles.<br/> Set one up now:</h2>
+          <Link to= "/viewProfile">
+            <button className="button" type = "button">
+              View Profile
+            </button>
+          </Link>
           <Link to= "/createProfile">
             <button className="button" type = "button">
               Create Profile
