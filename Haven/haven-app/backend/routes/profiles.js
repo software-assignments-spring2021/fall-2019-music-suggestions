@@ -1,11 +1,14 @@
+const express = require('express');
+const mongoose = require('mongoose');
 const router = require('express').Router();
 const multer = require('multer');
+
 const storage = multer.diskStorage({
   destination: function(req, file, cb){
     cb(null, './uploads/');
   },
   filename: function(req, file, cb){
-    cb(null, file.originalname);
+    cb(null, Date.now() + file.originalname);
   }
 });
 const fileFilter = (req,file,cb) => {
@@ -27,7 +30,9 @@ const upload = multer({
   },
   fileFilter: fileFilter
 });
+
 let Profile = require('../models/profile.model');
+
 
 //routes
 router.route('/').get((req, res) => {
@@ -45,7 +50,7 @@ router.route('/add').post(upload.single('profileImage'), (req, res) => {
   const description = req.body.description;
   const location = req.body.location;
   const website_url = req.body.website_url;
-  const profileImage = req.file.path
+  const profileImage = req.file.path;
 
   const newProfile = new Profile({display_name, user_type, genre, description, location, website_url, profileImage});
 

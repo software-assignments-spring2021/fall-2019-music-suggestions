@@ -70,7 +70,10 @@ export default class UserProfile extends Component {
   }
 
   onChangeProfileImage(e){
+
+
     this.setState({
+
       profileImage: e.target.files[0]
     })
   }
@@ -89,11 +92,26 @@ onSubmit(e){
     profileImage: this.state.profileImage
   }
 
+
   console.log(profile);
 
+  let formData = new FormData();    //formdata object
 
-  axios.post('http://localhost:5000/profiles/add', profile)
+  const config = {
+    headers: { 'content-type': 'multipart/form-data' }
+  }
+
+  formData.append('display_name', this.state.display_name);   //append the values with key, value pair
+  formData.append('user_type', this.state.user_type);
+  formData.append('genre', this.state.genre);
+  formData.append('description', this.state.description);
+  formData.append('location', this.state.location);
+  formData.append('website_url', this.state.website_url);
+  formData.append('profileImage', this.state.profileImage);
+
+  axios.post('http://localhost:5000/profiles/add', formData, config)
   .then(res => console.log(res.data));
+
 
   this.setState({
     display_name: '',
@@ -104,6 +122,7 @@ onSubmit(e){
     website_url: '',
     profileImage: null
   })
+
 }
 
   render() {
@@ -191,7 +210,8 @@ onSubmit(e){
                 <div className="form-group">
                 <label>Profile Image Upload: </label>
                 <div class="file-upload-wrapper">
-                <input type="file" id="input-file-now" class="file-upload" />
+                <input type="file" id="input-file-now" class="file-upload" onChange={(e) => this.onChangeProfileImage(e)} />
+
                 </div>
                 </div>
                 <div className="form-group">
