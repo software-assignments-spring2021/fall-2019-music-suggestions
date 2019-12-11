@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import bob from "../bob.jpeg";
+
 const User = props => (
 
 <div className="card-deck" style={{margin: '10px'}}>
@@ -10,14 +10,14 @@ const User = props => (
     <div className="card mb-4">
       {/* Card image */}
       <div className="view view-cascade overlay">
-        <img className="card-img-top" src={bob} alt="Card image cap" />
+        <img className="card-img-top" src={"http://localhost:5000/" + props.user.profileImage} alt="Card image cap" />
         <a><div className="mask rgba-white-slight"/></a>
       </div>
       <div className="card-body card-body-cascade text-center">
         {/* Title */}
         <h4 className="card-title"><strong>{props.user.display_name}</strong></h4>
         {/* Subtitle */}
-        <h6 className="font-weight-bold indigo-text py-2">{props.user.username}</h6>
+        <h6 className="font-weight-bold indigo-text py-2">{props.user.user_type}</h6>
         {/* Text */}
         <p className="card-text">{props.user.genre} </p>
         {/* Facebook */}
