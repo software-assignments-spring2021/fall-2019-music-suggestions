@@ -9,7 +9,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 export default class UserList extends Component {
   render() {
     return (
-      <div id="wholesection">
+      <div className="welcomeWhole" id="wholesection">
       <div className="main-body">
       <div className="main" id="section1">
           <img src= {HavenLogo} />

@@ -2,7 +2,7 @@
   font-family: 'Helvetica', sans-serif;
 }
 
-#wholesection{
+.welcomeWhole #wholesection{
   height: 100%;
   background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
   background-size: cover;
