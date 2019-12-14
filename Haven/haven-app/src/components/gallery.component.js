@@ -20,6 +20,7 @@ const Profile = props => (
         <h6 className="font-weight-bold indigo-text py-2">{props.profile.user_type}</h6>
         {/* Text */}
         <p className="card-text">{props.profile.genre} </p>
+        <p><Link to={"/profiles/"+props.profile._id}>View Profile</Link></p>
 
         {/* Facebook */}
         <a type="button" className="btn-floating btn-small btn-fb"><i className="fab fa-facebook-f" /></a>
