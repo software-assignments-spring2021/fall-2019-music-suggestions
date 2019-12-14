@@ -15,7 +15,8 @@ export default class SignIn extends Component {
 
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      success:false
     }
   }
 
@@ -41,18 +42,23 @@ export default class SignIn extends Component {
       password: this.state.password
 
     }
-
     console.log(signin);
 
     axios.post('http://localhost:5000/users/login', signin)
     .then(res => console.log(res.data));
 
     this.setState({
-
       username:'',
-      password: ''
-
+      password: '',
+      success: true
     })
+
+    if(this.state.success){
+      window.location = '/all';
+    }
+    else{
+      window.location = '/';
+    }
 
   }
 
@@ -71,7 +77,10 @@ export default class SignIn extends Component {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
         {/* Custom styles for this template */}
         <link href="signin.css" rel="stylesheet" />
-        <form className="form-signin">
+
+
+
+        <form className="form-signin" onSubmit={this.onSubmit}>
           <img className="mb-4" src= {HavenLogo} alt="" height={72} />
           <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
           <label htmlFor="inputUsername" className="sr-only">Username</label>
