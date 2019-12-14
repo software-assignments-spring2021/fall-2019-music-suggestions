@@ -25,7 +25,6 @@ function App() {
   if(user){
   return (
 
-
     <Router>
       <SignedInNavbar/>
       <br/>
@@ -35,9 +34,7 @@ function App() {
       <Route path="/myProfiles" component={MyProfiles}/>
       <Route path="/viewProfile" component={viewProfile}/>
     </Router>
-
   );
-
 }
 else{
   return (
