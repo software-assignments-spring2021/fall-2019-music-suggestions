@@ -12,6 +12,7 @@ import UserProfile from './components/user-profile.component.js'
 import Gallery from "./components/gallery.component.js";
 import MyProfiles from "./components/myprofiles.component.js";
 import viewProfile from "./components/view-profile.component.js";
+import StandardProfile from "./components/standard_profile.components.js";
 
 const routing = (
   <Router>
@@ -20,7 +21,7 @@ const routing = (
     <Route path="/browse" component = {App}/>
     <Route path="/all" component = {FindUser}/>
     <Route path="/edit/:id" component={UpdateUser} />
-    <Route path="/profiles/:id" component={viewProfile}/>
+    <Route path="/profiles/:id" component={StandardProfile}/>
     <Route path="/createProfile" component={UserProfile}/>
     <Route path="/gallery" component = {Gallery}/>
     <Route path="/myProfiles" component={MyProfiles}/>
