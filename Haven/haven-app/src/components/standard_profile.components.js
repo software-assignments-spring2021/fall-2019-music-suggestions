@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import "../css/view-profile.css"
 import leena from "../images/leena.jpg";
 import work1 from "../images/work1.jpg";
@@ -108,8 +109,6 @@ export default class StandardProfile extends Component {
     window.location = '/all'
   }
 
-
-
   render() {
     return (
 
@@ -125,12 +124,11 @@ export default class StandardProfile extends Component {
             {/* Card content */}
             <div>
               {/* Title - Display Name*/}
-              <h4><strong>Leena Loo</strong></h4>
+              <h4><strong>{this.state.display_name}</strong></h4>
               {/* Subtitle - Genre*/}
-              <h6>Painter</h6>
+              <h6>{this.state.genre}</h6>
               {/* Text - Description*/}
-              <p>DESCRIPTION HERE: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, ex, recusandae. Facere modi sunt, quod quibusdam.
-              </p>
+              <p>{this.state.description}</p>
               {/* Facebook */}
               <a type="button" className="socials"><i className="fab fa-facebook-f" /></a>
               {/* Twitter */}
