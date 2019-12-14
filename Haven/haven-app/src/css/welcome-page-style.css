@@ -8,13 +8,15 @@
   font-weight: bold;
   font-size: 30pt;
   line-height: 38px;
+  text-align: center !important;
+  left: 0%;
 }
 
 #section1 {
   height: 670px;
   background-image: url("https://media.giphy.com/media/KJguq9IjQVGYU/giphy.gif");
   background-size: cover;
-  margin: 0px;
+  margin: -10px;
   color: white;
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
@@ -67,14 +69,14 @@
 
 .main a{
   position: relative;
-  top: 150px;
+  top: 130px;
   color: white;
   font-size: 16pt;
 }
 
 .main button {
   position:relative;
-  top: 125px;
+  top: 0px;
   background-color: #d2c2b0;
   border: none;
   color: white;
