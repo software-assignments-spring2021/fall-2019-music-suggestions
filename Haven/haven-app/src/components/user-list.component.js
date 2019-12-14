@@ -4,11 +4,9 @@ import axios from 'axios';
 
 const Exercise = props => (
   <tr>
-
     <td>{props.user.email}</td>
     <td>{props.user.username}</td>
     <td>{props.user.password}</td>
-
     <td>{props.user.genre}</td>
     <td>{props.user.user_type}</td>
     <td>{props.user._id}</td>
