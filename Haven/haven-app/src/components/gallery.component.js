@@ -44,6 +44,8 @@ const Profile = props => (
               <Link to={"/profiles/"+props.profile._id}>View Profile</Link>
               </button>
             </div>
+
+
         </div>
 
         <div className="card-footer text-muted text-center">
