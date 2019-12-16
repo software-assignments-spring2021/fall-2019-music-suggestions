@@ -21,7 +21,7 @@ import viewProfile from "./components/view-profile.component.js";
 //import DeleteUser from "./components/delete-user.component";
 
 function App() {
-  const user = true;
+  const user = false;
   if(user){
   return (
 

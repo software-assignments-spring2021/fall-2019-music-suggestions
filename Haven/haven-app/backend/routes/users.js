@@ -1,7 +1,8 @@
 const router = require('express').Router();
 let User = require('../models/user.model');
-let UserSession = require('../models/userSession.model');
+//let UserSession = require('../models/userSession.model');
 const jwt = require('jsonwebtoken');
+const checkAuth = require('../middleware/check_auth');
 require('dotenv').config({ path: '../nodemon.json' });
 
 router.route('/').get((req, res) => {
@@ -15,13 +16,6 @@ router.route('/add').post((req, res) => {
   const email = req.body.email;
   const username = req.body.username;
   const password = req.body.password;
-
-  //
-
-  //const user_type = req.body.user_type;
-  //const genre = req.body.genre;
-
-  //email = email.toLowerCase();
 
   User.find(
     {username: username}, (err, previousUser) => {
@@ -88,10 +82,9 @@ router.route('/login').post((req, res) => {
       });
     });*/
     const web_token = jwt.sign({
-        username: users.username,
         userId: users._id
     },
-    /*process.env.JWT_KEY*/ "MusicSuggestions",
+    "MusicSuggestions",
     {
       expiresIn: "1h"
     });

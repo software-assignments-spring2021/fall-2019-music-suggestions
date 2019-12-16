@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import logo from '../images/haven-logo.png';
 import "../css/css_gallery/navbar.css"
 
 export default class Navbar extends Component {
+
+  logOut(e) {
+    e.preventDefault();
+    localStorage.removeItem('token');
+  }
 
   render() {
     const user = true;
