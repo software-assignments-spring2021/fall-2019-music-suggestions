@@ -11,10 +11,6 @@ export default class StandardProfile extends Component {
 
   constructor(props) {
     super(props);
-    this.onChangeDisplay_name = this.onChangeDisplay_name.bind(this);
-    this.onChangeUserType = this.onChangeUserType.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-
     this.state = {
       display_name: '',
       user_type: '',
@@ -56,64 +52,8 @@ export default class StandardProfile extends Component {
       })
   }
 
-  onChangeDisplay_name(e){
-    this.setState({
-      display_name: e.target.value
-    })
-  }
-
-  onChangeUserType(e){
-    this.setState({
-      user_type: e.target.value
-    })
-  }
-
-  onChangeGenre(e){
-    this.setState({
-      genre: e.target.value
-    })
-  }
-
-  onChangeDescription(e){
-    this.setState({
-      description: e.target.value
-    })
-  }
-
-  onChangeLocation(e){
-    this.setState({
-      location: e.target.value
-    })
-  }
-
-  onChangeWebsite_url(e){
-    this.setState({
-      website_url: e.target.value
-    })
-  }
-
-  onSubmit(e){
-    e.preventDefault();
-
-    const profile = {
-      display_name: this.state.display_name,
-      user_type: this.state.user_type,
-      genre: this.state.genre,
-      description: this.state.description,
-      location: this.state.location,
-      website_url: this.state.website_url
-    }
-
-    console.log(profile);
-
-    window.location = '/all'
-  }
-
-
-
   render() {
     return (
-
       <div>
         {/* Card deck */}
         <div>
@@ -149,7 +89,6 @@ export default class StandardProfile extends Component {
         </div>
         {/* Card deck */}
         </div>
-
     )
   }
 }
