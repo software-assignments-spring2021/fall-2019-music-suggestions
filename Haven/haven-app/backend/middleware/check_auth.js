@@ -2,8 +2,10 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
   try{
-  const decoded = jwt().verify(req.body.token, "MusicSuggestions");
-  req.userData = decoded;
+  const token = req.headers.authorization;
+  console.log(token);
+  const decoded = jwt.verify(token, "MusicSuggestions");
+  req.body.userData = decoded;
   next();
   }
   catch(error){

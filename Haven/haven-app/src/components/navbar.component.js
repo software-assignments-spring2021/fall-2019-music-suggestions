@@ -1,12 +1,49 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import logo from '../images/haven-logo.png';
 import "../css/css_gallery/navbar.css"
 
-export default class Navbar extends Component {
+class Navbar extends Component {
+
+  logOut(e) {
+    e.preventDefault();
+    localStorage.removeItem('usertoken');
+    this.props.history.push('gallery');
+  }
 
   render() {
-    const user = true;
+
+    const userlink = (
+
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item">
+          <Link to="/createProfile" className="nav-link" id="text">Create Profile</Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/myProfiles" className="nav-link" id="text">My Profiles</Link>
+        </li>
+        <li className="nav-item">
+          <a href="" onClick={this.logOut.bind(this)} id="text" className="nav-link">
+          LogOut
+          </a>
+        </li>
+
+      </ul>
+
+    )
+
+    const loginRegisterLink = (
+
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item active">
+        <Link to="/createUser" className="nav-link" id="text">Create Account</Link>
+        </li>
+        <li className="nav-item active">
+        <Link to="/signin" className="nav-link" id="text">Sign In</Link>
+        </li>
+      </ul>
+
+    )
 
     return (
 
@@ -40,27 +77,11 @@ export default class Navbar extends Component {
               <li className="nav-item active">
               <Link to="/gallery" className="nav-link" id="text">Explore</Link>
               </li>
-
-
-
-
-              <li className="nav-item">
-                <Link to="/createProfile" className="nav-link" id="text">Create Profile</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/myProfiles" className="nav-link" id="text">My Profiles</Link>
-              </li>
-              {/* Dropdown
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Explore</a>
-                <div className="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                  <a className="dropdown-item" href="#">Photographers</a>
-                  <a className="dropdown-item" href="#">Musicians</a>
-                  <a className="dropdown-item" href="#">More</a>
-                </div>
-              </li>*/}
             </ul>
-            {/* Links */}
+
+
+            {localStorage.usertoken ? userlink : loginRegisterLink}
+
             {/* Search form */}
             <form className="form-inline">
               <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
@@ -73,3 +94,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default withRouter(Navbar)

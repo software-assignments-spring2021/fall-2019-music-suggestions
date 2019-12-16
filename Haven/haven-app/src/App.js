@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //import logo from './logo.svg';
 import './App.css';
-import SignedInNavbar from "./components/signed-in-navbar.component";
+import Navbar from "./components/navbar.component";
 import SignedOutNavbar from "./components/signed-out-navbar.component";
 import Browse from "./components/browse-artists.component";
 
@@ -21,36 +21,23 @@ import viewProfile from "./components/view-profile.component.js";
 //import DeleteUser from "./components/delete-user.component";
 
 function App() {
-  const user = true;
-  if(user){
+
   return (
 
     <Router>
-      <SignedInNavbar/>
+      <Navbar/>
       <br/>
       <Route path="/browse" exact component = {Browse} />
       <Route path="/gallery" component = {Gallery}/>
       <Route path="/createProfile" component={UserProfile}/>
       <Route path="/myProfiles" component={MyProfiles}/>
       <Route path="/viewProfile" component={viewProfile}/>
+      <Route path="/signin" component={SignIn}/>
+      <Route path="/createUser" component={CreateUser}/>
     </Router>
   );
-}
-else{
-  return (
-  <Router>
-    <SignedOutNavbar/>
-    <br/>
-    <Route path="/browse" exact component = {Browse} />
-    <Route path="/gallery" component = {Gallery}/>
-    <Route path="/createUser" component = {CreateUser}/>
-    <Route path="/signin" component = {SignIn}/>
 
 
-  </Router>
-
-  );
-}
 
 }
 

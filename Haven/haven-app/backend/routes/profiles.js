@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = require('express').Router();
 const multer = require('multer');
+const checkAuth = require('../middleware/check_auth');
+const jwt = require('jsonwebtoken');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb){
@@ -42,8 +44,11 @@ router.route('/').get((req, res) => {
 });
 
 
-router.route('/add').post(upload.single('profileImage'), (req, res) => {
+router.route('/add').post(checkAuth, upload.single('profileImage'), (req, res) => {
   console.log(req.file);
+  const decoded = jwt.decode(req.headers.authorization);
+  const user_id = decoded.userId;
+  console.log(user_id);
   const display_name = req.body.display_name;
   const user_type = req.body.user_type;
   const genre = req.body.genre;
@@ -52,7 +57,7 @@ router.route('/add').post(upload.single('profileImage'), (req, res) => {
   const website_url = req.body.website_url;
   const profileImage = req.file.path;
 
-  const newProfile = new Profile({display_name, user_type, genre, description, location, website_url, profileImage});
+  const newProfile = new Profile({user_id, display_name, user_type, genre, description, location, website_url, profileImage});
 
   newProfile.save()
     .then(() => res.json('Profile added!'))
@@ -60,7 +65,7 @@ router.route('/add').post(upload.single('profileImage'), (req, res) => {
 });
 
 
-router.route('/:id').get((req, res) => {
+router.route('/:id').get(checkAuth, (req, res) => {
   Profile.findById(req.params.id)
     .then(profile => res.json(profile))
     .catch(err => res.status(400).json('Error: ' + err));

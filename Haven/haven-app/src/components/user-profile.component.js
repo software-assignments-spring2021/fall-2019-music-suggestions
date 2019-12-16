@@ -110,7 +110,10 @@ onSubmit(e){
   formData.append('profileImage', this.state.profileImage);
 
   axios.post('http://localhost:5000/profiles/add', formData, config)
-  .then(res => console.log(res.data));
+  .then(res => {
+    console.log(res.data);
+    this.props.history.push('/gallery')
+  });
 
 
   this.setState({
