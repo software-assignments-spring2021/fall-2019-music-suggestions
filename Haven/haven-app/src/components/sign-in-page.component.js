@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/signin.css"
 import HavenLogo from "../images/haven-logo.png";
@@ -45,20 +46,16 @@ export default class SignIn extends Component {
     console.log(signin);
 
     axios.post('http://localhost:5000/users/login', signin)
-    .then(res => console.log(res.data));
+    .then(res => {
+      localStorage.setItem('usertoken', res.data);
+      return <Redirect to="/gallery"/>
+    });
 
     this.setState({
       username:'',
       password: '',
       success: true
     })
-
-    if(this.state.success){
-      window.location = '/all';
-    }
-    else{
-      window.location = '/';
-    }
 
   }
 
