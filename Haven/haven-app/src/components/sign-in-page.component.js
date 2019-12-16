@@ -48,7 +48,7 @@ export default class SignIn extends Component {
     axios.post('http://localhost:5000/users/login', signin)
     .then(res => {
       localStorage.setItem('usertoken', res.data);
-      return <Redirect to="/gallery"/>
+      window.location = "/gallery";      
     });
 
     this.setState({
