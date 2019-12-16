@@ -1,0 +1,84 @@
+#img1 {
+  margin-top: 100px;
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  margin-top: 110px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#img {
+  height: 340px;
+  display: block;
+
+}
+
+#card {
+  width: 340px;
+  height: 650px;
+
+  overflow: hidden;
+  text-align: center;
+}
+
+#cardTitle {
+  display: block;
+}
+
+h4.card-title{
+  padding: 20px 0px 0px 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+}
+
+h7 {
+  text-align: center;
+  margin: 0px 5px 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+}
+
+
+#cardSubtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+  color: #0050a1;
+}
+
+p#cardText  {
+  margin: 0px 0px 10px;
+  text-align: center;
+  top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#viewProfile {
+  margin: 0px 0px 10px;
+  text-align: center;
+  top: 30px;
+  left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em
+
+}
+
+#button {
+  padding: 20px 0px 0px 5px;
+}
+
+#social {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
