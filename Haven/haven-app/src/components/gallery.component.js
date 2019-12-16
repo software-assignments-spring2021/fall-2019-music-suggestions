@@ -40,7 +40,9 @@ const Profile = props => (
               <a type="button" className="btn-floating btn-small btn-dribbble"><i className="fab fa-dribbble" /></a></span>
             </div>
             <div id="button">
-              <button type="button" class="btn btn-outline-primary waves-effect" Link to={"/profiles/"+props.profile._id}>View Profile</button>
+              <button type="button" class="btn btn-outline-primary waves-effect">
+              <Link to={"/profiles/"+props.profile._id}>View Profile</Link>
+              </button>
             </div>
         </div>
 
