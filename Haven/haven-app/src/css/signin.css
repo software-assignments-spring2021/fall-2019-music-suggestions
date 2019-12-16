@@ -3,22 +3,29 @@ html,
 body {
   height: 100%;
 }
+#content {
+  padding-top: 100px;
+  text-align: center;
+}
 
+h1 {
+  color: #eff7ff;
+}
 #section3 {
-  height: 670px;
-  background-image: url("https://media.giphy.com/media/d97OPMEimWGBi/source.gif");
+  height: 870px;
+  background-image: url("https://media.giphy.com/media/2tNvsKkc0qFdNhJmKk/giphy.gif");
   background-size: cover;
-  margin: 0px;
+  margin-top: 0px;
 }
 
 signin-body {
-  background-image: url("https://media.giphy.com/media/d97OPMEimWGBi/source.gif");
+  background-image: url("https://media.giphy.com/media/2tNvsKkc0qFdNhJmKk/giphy.gif");
   background-size: cover;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 40px;
+  margin: 0px;
   padding-bottom: 40px;
   background-color: #333;
   color: white;
