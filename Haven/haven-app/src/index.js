@@ -18,12 +18,12 @@ const routing = (
   <Router>
     <Route exact path = "/" component = {WelcomePage} />
     <Route path="/signin" component = {SignIn}/>
-    <Route path="/browse" component = {App}/>
+    <Route path="/gallery" component = {App}/>
     <Route path="/all" component = {FindUser}/>
     <Route path="/edit/:id" component={UpdateUser} />
     <Route path="/profiles/:id" component={StandardProfile}/>
     <Route path="/createProfile" component={UserProfile}/>
-    <Route path="/gallery" component = {Gallery}/>
+    
     <Route path="/myProfiles" component={MyProfiles}/>
     <Route path="/viewProfile" component={viewProfile}/>
   </Router>
