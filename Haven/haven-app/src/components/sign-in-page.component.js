@@ -47,8 +47,10 @@ export default class SignIn extends Component {
 
     axios.post('http://localhost:5000/users/login', signin)
     .then(res => {
-      localStorage.setItem('usertoken', res.data);
-      window.location = "/gallery";      
+      localStorage.setItem('usertoken', res.data.token);
+      //console.log(res.data.token);
+      console.log(localStorage.usertoken);
+      //window.location = "/gallery";
     });
 
     this.setState({

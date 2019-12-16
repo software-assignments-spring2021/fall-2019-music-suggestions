@@ -44,11 +44,11 @@ router.route('/').get((req, res) => {
 });
 
 
-router.route('/add').post(upload.single('profileImage'), (req, res) => {
+router.route('/add').post(checkAuth, upload.single('profileImage'), (req, res) => {
   console.log(req.file);
-  //onst decoded = jwt.decode(req.headers.authorization);
-  //const user_id = decoded.userId;
-  //console.log(user_id);
+  const decoded = jwt.decode(req.headers.authorization);
+  const user_id = decoded.userId;
+  console.log(user_id);
   const display_name = req.body.display_name;
   const user_type = req.body.user_type;
   const genre = req.body.genre;
@@ -57,7 +57,7 @@ router.route('/add').post(upload.single('profileImage'), (req, res) => {
   const website_url = req.body.website_url;
   const profileImage = req.file.path;
 
-  const newProfile = new Profile({display_name, user_type, genre, description, location, website_url, profileImage});
+  const newProfile = new Profile({user_id, display_name, user_type, genre, description, location, website_url, profileImage});
 
   newProfile.save()
     .then(() => res.json('Profile added!'))

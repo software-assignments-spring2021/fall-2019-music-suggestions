@@ -98,7 +98,7 @@ onSubmit(e){
   let formData = new FormData();    //formdata object
 
   const config = {
-    headers: { 'content-type': 'multipart/form-data' }
+    headers: { 'content-type': 'multipart/form-data', 'authorization': localStorage.usertoken }
   }
 
   formData.append('display_name', this.state.display_name);   //append the values with key, value pair
@@ -111,7 +111,7 @@ onSubmit(e){
 
   axios.post('http://localhost:5000/profiles/add', formData, config)
   .then(res => {
-    console.log(res.data);
+    
     this.props.history.push('/gallery')
   });
 

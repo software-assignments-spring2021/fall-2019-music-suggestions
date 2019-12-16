@@ -18,7 +18,7 @@ export default class UserList extends Component {
             Get started now.</p><br />
 
 
-          <Link to= "/browse">
+          <Link to= "/gallery">
             <button className="button" type = "button">
               Explore Artists
             </button>
