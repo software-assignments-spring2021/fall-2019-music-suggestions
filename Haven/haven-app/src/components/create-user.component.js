@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/create-user.css"
+import HavenLogo from "../images/haven-logo.png";
 import axios from 'axios';
-import "../css/create-user.css";
+
+
 
 class NewUserFactory {
   constructor (username, userType){
@@ -125,74 +130,40 @@ onSubmit(e){
 
   render() {
     return (
+      <div className="createuser-body" id="section3">
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" />
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+        <meta name="generator" content="Jekyll v3.8.5" />
+        <title>Signin Template · Bootstrap</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/" />
+        {/* Bootstrap core CSS */}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
+        {/* Custom styles for this template */}
+        <link href="create-user.css" rel="stylesheet" />
 
-      <div id="signin">
-          <div>
-              <h3>Create New User</h3>
-              <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                  <label>Email: </label>
-                  <input  type="text"
-                      required
-                      className="form-control"
-                      value={this.state.email}
-                      onChange={this.onChangeEmail}
-                      />
-                </div>
-                <div className="form-group">
-                  <label>Username: </label>
-                  <input  type="text"
-                      required
-                      className="form-control"
-                      value={this.state.username}
-                      onChange={this.onChangeUsername}
-                      />
-                </div>
-                <div className="form-group">
-                  <label>Password: </label>
-                  <input  type="text"
-                      required
-                      className="form-control"
-                      value={this.state.password}
-                      onChange={this.onChangePassword}
-                      />
-                </div>
-                {/*// SWITCHED TO BUTTON!!!!!
-                <div className="form-group">
-                  <label>User Type: </label>
-                  <select type="text"
-                      required
-                      className="form-control"
-                      value={this.state.user_type}
-                      onChange={this.onChangeUserType}>
 
-                    <option value="consumer">Consumer</option>
-                    <option value="serviceprovider">Service Provider</option>
+        <div id="content">
+          <form className="form-signin" onSubmit={this.onSubmit}>
+            <img className="mb-4" src= {HavenLogo} alt="" height={72} />
+            <h1 className="h3 mb-3 font-weight-normal">Create New Account</h1>
+            <label htmlFor="inputUsername" className="sr-only">Email:</label>
+            <input type="text" id="inputEmail" className="form-control" placeholder="Email" value={this.state.email} onChange={this.onChangeEmail} required/>
+            <label htmlFor="inputPassword" className="sr-only">Username:</label>
+            <input type="text" id="inputUsername" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onChangeUsername} required />
+            <label htmlFor="inputPassword" className="sr-only">Password:</label>
+            <input type="password" id="inputPassword" className="form-control" placeholder="Password" value={this.state.password} onChange={this.onChangePassword} required/>
 
-                  </select>
-                </div>
-                {/* SWITCHED TO BUTTON!!!!!
-                <div className="form-group">
-                  <label>Genre Type: </label>
-                  <select type="text"
-                      required
-                      className="form-control"
-                      value={this.state.genre}
-                      onChange={this.onChangeGenre}>
-                    <option value="photographer">Photographer</option>
-                    <option value="musician">Musician</option>
-                    <option value="cook">Cook</option>
-                    <option value="dancer">Dancer</option>
-                    <option value="dj">DJ</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>*/}
-                <div className="form-group">
-                  <input type="submit" value="Create User" className="btn btn-primary" />
-                </div>
-              </form>
-            </div>
-          </div>
+            <br/>
+            <button className="btn btn-lg btn-primary btn-block" type="submit" value="Create User">Create Account</button>
+
+          </form>
+        </div>
+        </div>
+
+
+
 
     )
   }
