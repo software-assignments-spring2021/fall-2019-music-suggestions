@@ -1,5 +1,6 @@
 #signin {
 
+  padding-top: 50px;
   margin-left: 40px;
   margin-right: 40px;
   text-align: left;
@@ -10,6 +11,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
+  
 }
 
 .form-control {
@@ -18,5 +20,14 @@
 }
 
 .create-profile-text{
-  text-align: left !important;
+  padding-bottom: 20px;
+  text-align: center !important;
+  color: white;
+}
+
+#background {
+  height: 870px;
+  background-image: url("https://media.giphy.com/media/2tNvsKkc0qFdNhJmKk/giphy.gif");
+  background-size: cover;
+  margin-top: -50px;
 }
