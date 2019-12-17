@@ -5,6 +5,9 @@ import leena from "../images/leena.jpg";
 import work1 from "../images/work1.jpg";
 import work2 from "../images/work2.jpg";
 import work3 from "../images/work3.jpg";
+import work4 from "../images/work4.jpg";
+import work5 from "../images/work5.jpg";
+import work6 from "../images/work6.jpg";
 
 export default class viewProfile extends Component {
   render() {
@@ -38,10 +41,15 @@ export default class viewProfile extends Component {
             {/* Card footer */}
           </div>
           {/* Card */}
-          <div>
+          <div id="row1">
             <img className="workPic" src={work1} />
             <img className="workPic" src={work2} />
             <img className="workPic" src={work3} />
+          </div>
+          <div id="row2">
+            <img className="workPic" src={work4} />
+            <img className="workPic" src={work5} />
+            <img className="workPic" src={work6} />
           </div>
         </div>
         {/* Card deck */}
