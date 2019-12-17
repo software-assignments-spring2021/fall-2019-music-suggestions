@@ -32,8 +32,13 @@ export default class StandardProfile extends Component {
         genre: response.data.genre,
         description: response.data.description,
         location: response.data.location,
-        website_url: response.data.website_url
+        website_url: response.data.website_url,
+        profileImage1: response.data.profileImage1,
+        profileImage2: response.data.profileImage2,
+        profileImage3: response.data.profileImage3,
+        profileImage4: response.data.profileImage4
       })
+      console.log(response.data);
     })
     .catch(function(error){
       console.log(error);
@@ -43,7 +48,7 @@ export default class StandardProfile extends Component {
       .then(response =>{
         if (response.data.length > 0){
           this.setState({
-            profiles: response.data.map(profile => profile.display_name),
+            profiles: response.data.map(profile => profile.display_name)
           })
         }
       })
@@ -61,7 +66,7 @@ export default class StandardProfile extends Component {
           <div>
             {/* Card image */}
             <div>
-              <img className="profilePic" src={leena} />
+              <img className="profilePic" src={"http://localhost:5000/" + this.state.profileImage1} />
             </div>
             {/* Card content */}
             <div>
@@ -82,9 +87,9 @@ export default class StandardProfile extends Component {
           </div>
           {/* Card */}
           <div>
-            <img className="workPic" src={work1} />
-            <img className="workPic" src={work2} />
-            <img className="workPic" src={work3} />
+            <img className="workPic" src={"http://localhost:5000/" + this.state.profileImage2} />
+            <img className="workPic" src={"http://localhost:5000/" + this.state.profileImage3} />
+            <img className="workPic" src={"http://localhost:5000/" + this.state.profileImage4} />
           </div>
         </div>
         {/* Card deck */}

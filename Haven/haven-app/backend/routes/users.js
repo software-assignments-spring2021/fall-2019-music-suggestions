@@ -34,6 +34,7 @@ router.route('/add').post((req, res) => {
 
   newUser.save()
     .then(() => res.json('User added!'))
+    
     .catch(err => res.status(400).json('Error: ' + err));
     });
 });
@@ -99,93 +100,6 @@ router.route('/login').post((req, res) => {
 
 });
 
-/*router.route('/verify').get((req,res, next) => {
-  // Get the token
-    const { query } = req;
-    const { token } = query;
-    // ?token=test
-    // Verify the token is one of a kind and it's not deleted.
-    UserSession.find({
-      _id: token,
-      isDeleted: false
-    }, (err, sessions) => {
-      if (err) {
-        console.log(err);
-        return res.send({
-          success: false,
-          message: 'Error: Server error'
-        });
-      }
-
-      if (sessions.length != 1) {
-        return res.send({
-          success: false,
-          message: 'Error: Invalid',
-          //length: sessions.length
-        });
-      } else {
-        // DO ACTION
-        return res.send({
-          success: true,
-          message: 'Good'
-        });
-      }
-
-  });
-});
-*/
-
-/*
-router.route('/logout').get((req,res, next) => {
-  // Get the token
-    const { query } = req;
-    const { token } = query;
-    // ?token=test
-    // Verify the token is one of a kind and it's not deleted.
-    UserSession.findOneAndUpdate({
-      _id: token,
-      isDeleted: false
-    }, {
-      $set:{isDeleted:true}
-    }, {new: true}, (err, sessions) => {
-      if (err) {
-        console.log(err);
-        return res.send({
-          success: false,
-          message: 'Error: Server error'
-        });
-      }
-  });
-  UserSession.find({
-    _id: token,
-    isDeleted: true
-  }, (err, sessions) => {
-    if (err) {
-      console.log(err);
-      return res.send({
-        success: false,
-        message: 'Error: Server error'
-      });
-    }
-
-    if (sessions.length != 1) {
-      return res.send({
-        success: false,
-        message: 'Error: Invalid',
-        //length: sessions.length
-      });
-    } else {
-      // DO ACTION
-      return res.send({
-        success: true,
-        message: 'Good'
-      });
-    }
-
-  });
-
-});
-*/
 
 
 

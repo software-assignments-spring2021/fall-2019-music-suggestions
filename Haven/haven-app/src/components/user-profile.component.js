@@ -25,7 +25,10 @@ export default class UserProfile extends Component {
       description: '',
       location: '',
       website_url: '',
-      profileImage: null
+      profileImage1: null,
+      profileImage2: null,
+      profileImage3: null,
+      profileImage4: null
     }
   }
 
@@ -74,7 +77,10 @@ export default class UserProfile extends Component {
 
     this.setState({
 
-      profileImage: e.target.files[0]
+      profileImage1: e.target.files[0],
+      profileImage2: e.target.files[1],
+      profileImage3: e.target.files[2],
+      profileImage4: e.target.files[3]
     })
   }
 
@@ -89,7 +95,10 @@ onSubmit(e){
     description: this.state.description,
     location: this.state.location,
     website_url: this.state.website_url,
-    profileImage: this.state.profileImage
+    profileImage1: this.state.profileImage1,
+    profileImage2: this.state.profileImage2,
+    profileImage3: this.state.profileImage3,
+    profileImage4: this.state.profileImage4
   }
 
 
@@ -107,11 +116,14 @@ onSubmit(e){
   formData.append('description', this.state.description);
   formData.append('location', this.state.location);
   formData.append('website_url', this.state.website_url);
-  formData.append('profileImage', this.state.profileImage);
+  formData.append('profileImage1', this.state.profileImage1);
+  formData.append('profileImage2', this.state.profileImage2);
+  formData.append('profileImage3', this.state.profileImage3);
+  formData.append('profileImage4', this.state.profileImage4);
 
   axios.post('http://localhost:5000/profiles/add', formData, config)
   .then(res => {
-    
+
     this.props.history.push('/gallery')
   });
 
@@ -123,7 +135,10 @@ onSubmit(e){
     description: '',
     location: '',
     website_url: '',
-    profileImage: null
+    profileImage1: null,
+    profileImage2: null,
+    profileImage3: null,
+    profileImage4: null
   })
 
 }
@@ -210,13 +225,19 @@ onSubmit(e){
                       />
                 </div>
 
-                <div className="form-group">
-                <label>Profile Image Upload: </label>
-                <div class="file-upload-wrapper">
-                <input type="file" id="input-file-now" class="file-upload" onChange={(e) => this.onChangeProfileImage(e)} />
+                <form className="md-form" action="#">
+                  <div className="file-field">
+                    <div className="btn btn-primary btn-sm float-left">
+                    <span>Choose files</span>
+                    <input type="file" multiple onChange={(e) => this.onChangeProfileImage(e)}/>
+                    </div>
+                    <div className="file-path-wrapper">
+                    <input className="file-path validate" type="text" placeholder="Upload one or more files"/>
+                    </div>
+                    </div>
+                    </form>
 
-                </div>
-                </div>
+              <div/>
                 <div className="form-group">
                   <input type="submit" value="Create Profile" className="btn btn-primary" />
                 </div>
