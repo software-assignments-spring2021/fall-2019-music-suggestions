@@ -12,7 +12,7 @@ const Profile = props => (
       {/* Card image */}
       <div className="view view-cascade overlay">
 
-        <img className="card-img-top" id="img" src={"http://localhost:5000/" + props.profile.profileImage} alt="Card image cap" />
+        <img className="card-img-top" id="img" src={"http://localhost:5000/" + props.profile.profileImage1} alt="Card image cap" />
         <a><div className="mask rgba-white-slight"/></a></div>
 
         <div className="card-body card-body-cascade text-center" id="cardContent">

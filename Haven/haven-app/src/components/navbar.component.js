@@ -75,7 +75,7 @@ class Navbar extends Component {
             {/* Links */}
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-              <Link to="/gallery" className="nav-link" id="text">Explore</Link>
+              <Link to="/gallery" className="nav-link" id="text"></Link>
               </li>
             </ul>
 

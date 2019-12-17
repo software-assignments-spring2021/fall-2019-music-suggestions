@@ -45,7 +45,19 @@ const profileSchema = new Schema({
     unique: false,
     trim: false
   },
-  profileImage:{
+  profileImage1:{
+    type:String,
+    required:false
+  },
+  profileImage2:{
+    type:String,
+    required:false
+  },
+  profileImage3:{
+    type:String,
+    required:false
+  },
+  profileImage4:{
     type:String,
     required:false
   }

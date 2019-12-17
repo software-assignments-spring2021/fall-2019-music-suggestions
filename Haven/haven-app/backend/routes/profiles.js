@@ -44,8 +44,8 @@ router.route('/').get((req, res) => {
 });
 
 
-router.route('/add').post(checkAuth, upload.single('profileImage'), (req, res) => {
-  console.log(req.file);
+router.route('/add').post(checkAuth, upload.any(), (req, res) => {
+  console.log(req.files);
   const decoded = jwt.decode(req.headers.authorization);
   const user_id = decoded.userId;
   console.log(user_id);
@@ -55,9 +55,12 @@ router.route('/add').post(checkAuth, upload.single('profileImage'), (req, res) =
   const description = req.body.description;
   const location = req.body.location;
   const website_url = req.body.website_url;
-  const profileImage = req.file.path;
+  const profileImage1 = req.files[0].path;
+  const profileImage2 = req.files[1].path;
+  const profileImage3 = req.files[2].path;
+  const profileImage4 = req.files[3].path;
 
-  const newProfile = new Profile({user_id, display_name, user_type, genre, description, location, website_url, profileImage});
+  const newProfile = new Profile({user_id, display_name, user_type, genre, description, location, website_url, profileImage1,profileImage2,profileImage3,profileImage4});
 
   newProfile.save()
     .then(() => res.json('Profile added!'))
@@ -65,7 +68,7 @@ router.route('/add').post(checkAuth, upload.single('profileImage'), (req, res) =
 });
 
 
-router.route('/:id').get(checkAuth, (req, res) => {
+router.route('/:id').get((req, res) => {
   Profile.findById(req.params.id)
     .then(profile => res.json(profile))
     .catch(err => res.status(400).json('Error: ' + err));
