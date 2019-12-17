@@ -78,23 +78,24 @@ export default class SignIn extends Component {
         <link href="signin.css" rel="stylesheet" />
 
 
-
-        <form className="form-signin" onSubmit={this.onSubmit}>
-          <img className="mb-4" src= {HavenLogo} alt="" height={72} />
-          <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-          <label htmlFor="inputUsername" className="sr-only">Username</label>
-          <input type="text" id="inputUsername" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onChangeUsername} required/>
-          <label htmlFor="inputPassword" className="sr-only">Password</label>
-          <input type="password" id="inputPassword" className="form-control" placeholder="Password" value={this.state.password} onChange={this.onChangePassword} required />
-          <div className="checkbox mb-3">
-            <label>
-              <input type="checkbox" defaultValue="remember-me" /> Remember me
-            </label>
-          </div>
-          <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-          <p className="mt-5 mb-3 text-muted">© 2017-2019</p>
-        </form>
-      </div>
+        <div id="content">
+          <form className="form-signin" onSubmit={this.onSubmit}>
+            <img className="mb-4" src= {HavenLogo} alt="" height={72} />
+            <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label htmlFor="inputUsername" className="sr-only">Username</label>
+            <input type="text" id="inputUsername" className="form-control" placeholder="Username" value={this.state.username} onChange={this.onChangeUsername} required/>
+            <label htmlFor="inputPassword" className="sr-only">Password</label>
+            <input type="password" id="inputPassword" className="form-control" placeholder="Password" value={this.state.password} onChange={this.onChangePassword} required />
+            <div className="checkbox mb-3">
+              <label>
+                <input type="checkbox" defaultValue="remember-me" /> Remember me
+              </label>
+            </div>
+            <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <p className="mt-5 mb-3 text-muted">© 2017-2019</p>
+          </form>
+        </div>
+        </div>
     )
   }
 }
