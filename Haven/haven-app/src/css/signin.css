@@ -6,6 +6,8 @@ body {
 #content {
   padding-top: 100px;
   text-align: center;
+  top:-100px;
+
 }
 
 h1 {
@@ -15,7 +17,8 @@ h1 {
   height: 870px;
   background-image: url("https://media.giphy.com/media/2tNvsKkc0qFdNhJmKk/giphy.gif");
   background-size: cover;
-  margin-top: 0px;
+  margin-top: -50px;
+
 }
 
 signin-body {

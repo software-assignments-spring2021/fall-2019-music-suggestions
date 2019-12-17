@@ -20,10 +20,10 @@ export default class UserProfile extends Component {
 
     this.state = {
       display_name: '',
-      user_type: '',
-      genre: '',
+      user_type: 'consumer',
+      genre: 'photographer',
       description: '',
-      location: '',
+      location: 'New York, NY',
       website_url: '',
       profileImage1: null,
       profileImage2: null,
@@ -130,10 +130,10 @@ onSubmit(e){
 
   this.setState({
     display_name: '',
-    user_type: '',
-    genre: '',
+    user_type: 'consumer',
+    genre: 'photographer',
     description: '',
-    location: '',
+    location: 'New York, NY',
     website_url: '',
     profileImage1: null,
     profileImage2: null,

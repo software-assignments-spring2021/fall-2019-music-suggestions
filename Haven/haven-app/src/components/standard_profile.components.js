@@ -65,7 +65,7 @@ export default class StandardProfile extends Component {
           {/* Card */}
           <div>
             {/* Card image */}
-            <div>
+            <div id="propic">
               <img className="profilePic" src={"http://localhost:5000/" + this.state.profileImage1} />
             </div>
             {/* Card content */}
