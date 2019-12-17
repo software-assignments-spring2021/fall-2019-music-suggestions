@@ -23,10 +23,6 @@ const routing = (
     <Route path="/edit/:id" component={UpdateUser} />
     <Route path="/profiles/:id" component={StandardProfile}/>
     <Route path="/createProfile" component={UserProfile}/>
-<<<<<<< HEAD
-    <Route path="/gallery" component = {Gallery}/>
-=======
->>>>>>> d4b2851a7961ed3e5bef136dc980cd9822a8ef4d
     <Route path="/myProfiles" component={MyProfiles}/>
     <Route path="/viewProfile" component={viewProfile}/>
   </Router>
