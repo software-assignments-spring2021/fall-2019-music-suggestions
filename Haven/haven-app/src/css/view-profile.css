@@ -1,63 +1,55 @@
-.profilePic{
-  display: inline;
-  margin: 0 auto;
-  margin-left: 0;
-  height:100%;
-  width: auto;
+.allProfile{
+  position: absolute;
   float: left;
-
-
 }
-#propic{
-   width: 150px;
-   height: 150px;
-   position: relative;;
-   overflow: hidden;
-   border-radius: 50%;
-
+.profilePic{
+  position: inherit;
+  border-radius: 100%;
+  float: left;
+  object-fit: cover;
+  width:200px;
+  height:200px;
+  margin-left: 5%;
 }
+
 h4{
+  position: inherit;
   float:left;
-  padding-left: 80px;
-  padding-top: 50px;
+  padding-left: 5%;
+  padding-top: 2%;
   font-size: 30px;
 }
 
 h6{
+  position: inherit;
   float:left;
-  padding-top: 59px;
-  padding-left: 50px;
-  font-size: 20px;
+  padding-top: 2%;
+  padding-left: 1%;
+  font-size: 30px;
+  font-style: italic;
 }
 
-p{
-  position:relative;
-  top: 100px;
-  left: -63px;
+.descriptionText{
+  position: inherit;
+  padding-top: 6%;
+  padding-left: 26%;
 }
 
 .socials{
-  position: relative;
-  top:40px;
-  left: -250px;
-  padding: 10px;
-  margin: 2px;
+  position: inherit !important;
+  margin-left: 5% !important;
+
 }
 
-#row1{
-  left: 10px;
-}
-#row2{
-  left:200px;
+.workContainer{
+  text-align: center;
 }
 
 .workPic{
-  position: relative;
-  margin-top: 100px;
+  position: inherit;
   object-fit:cover;
-  margin-top: 110px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-top: 8% !important;
+  margin-left: 4% !important;
   width:300px;
   height:300px;
 
