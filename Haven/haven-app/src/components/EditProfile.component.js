@@ -10,6 +10,8 @@ export default class EditProfile extends Component {
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeURL = this.onChangeURL.bind(this);
+    this.onChangeFacebook_url = this.onChangeFacebook_url.bind(this);
+    this.onChangeInstagram_url = this.onChangeInstagram_url.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -19,6 +21,8 @@ export default class EditProfile extends Component {
       description: '',
       location: '',
       website_url: '',
+      facebook_url: '',
+      instagram_url: '',
       profiles: []
     }
   }
@@ -33,6 +37,8 @@ export default class EditProfile extends Component {
           description: response.data.description,
           location: response.data.location,
           website_url: response.data.website_url,
+          facebook_url: response.data.facebook_url,
+          instagram_url: response.data.instagram_url,
         })
       })
       .catch(function (error) {
@@ -84,6 +90,18 @@ export default class EditProfile extends Component {
   onChangeURL(e){
     this.setState({
       website_url: e.target.value
+    })
+  }
+
+  onChangeFacebook_url(e){
+    this.setState({
+      facebook_url: e.target.value
+    })
+  }
+
+  onChangeInstagram_url(e){
+    this.setState({
+      instagram_url: e.target.value
     })
   }
 
@@ -160,12 +178,30 @@ export default class EditProfile extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Website URL: </label>
+          <label>Personal Website Link: </label>
             <input type="text"
                 required
                 className="form-control"
                 value={this.state.website_url}
                 onChange={this.onChangeURL}
+              />
+        </div>
+        <div className="form-group">
+          <label>Facebook Link: </label>
+            <input type="text"
+                required
+                className="form-control"
+                value={this.state.facebook_url}
+                onChange={this.onChangeFacebook_url}
+              />
+        </div>
+        <div className="form-group">
+          <label>Instagram Link: </label>
+            <input type="text"
+                required
+                className="form-control"
+                value={this.state.instagram_url}
+                onChange={this.onChangeInstagram_url}
               />
         </div>
         <div className="form-group">
