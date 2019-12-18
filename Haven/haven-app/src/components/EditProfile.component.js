@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import "../css/edit-profile.css"
 export default class EditProfile extends Component {
   constructor(props) {
     super(props);
@@ -110,8 +110,10 @@ export default class EditProfile extends Component {
   render() {
     return (
     <div>
-      <h3>Edit User Log</h3>
+      <h3><strong>Edit User Log</strong></h3>
+      <div id="editprofile">
       <form onSubmit={this.onSubmit}>
+
         <div className="form-group">
           <label>Display Name: </label>
             <input type="text"
@@ -140,7 +142,7 @@ export default class EditProfile extends Component {
               />
         </div>
         <div className="form-group">
-          <label>description: </label>
+          <label>Description: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -170,6 +172,7 @@ export default class EditProfile extends Component {
           <input type="submit" value="Edit User Data" className="btn btn-primary" />
         </div>
       </form>
+      </div>
     </div>
     )
   }
