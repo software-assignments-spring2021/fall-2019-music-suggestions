@@ -24,7 +24,7 @@ const routing = (
     <Route path="/edit/:id" component={UpdateUser} />
     <Route path="/profiles/:id" component={StandardProfile}/>
     <Route path="/createProfile" component={UserProfile}/>
-    <Route path="/myProfiles" component={MyProfiles}/>
+    <Route path="/myProfiles" component={ProfileList}/>
     <Route path="/viewProfile" component={viewProfile}/>
     <Route path="/profileList" component={ProfileList}/>
   </Router>
