@@ -22,8 +22,8 @@ export default class UserProfile extends Component {
 
     this.state = {
       display_name: '',
-      user_type: 'consumer',
-      genre: 'photographer',
+      user_type: 'Consumer',
+      genre: 'Photography',
       description: '',
       location: 'New York, NY',
       website_url: '',
@@ -150,8 +150,8 @@ onSubmit(e){
 
   this.setState({
     display_name: '',
-    user_type: 'consumer',
-    genre: 'photographer',
+    user_type: 'Consumer',
+    genre: 'Photography',
     description: '',
     location: 'New York, NY',
     website_url: '',
@@ -191,8 +191,8 @@ onSubmit(e){
                       value={this.state.user_type}
                       onChange={this.onChangeUserType}>
 
-                    <option value="consumer">Consumer</option>
-                    <option value="serviceprovider">Service Provider</option>
+                    <option value="Consumer">Consumer</option>
+                    <option value="Service Provider">Service Provider</option>
 
                   </select>
                 </div>
@@ -204,12 +204,12 @@ onSubmit(e){
                       className="form-control"
                       value={this.state.genre}
                       onChange={this.onChangeGenre}>
-                    <option value="photographer">Photographer</option>
-                    <option value="musician">Musician</option>
-                    <option value="cook">Cook</option>
-                    <option value="dancer">Dancer</option>
-                    <option value="dj">DJ</option>
-                    <option value="other">Other</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Music">Music</option>
+                    <option value="Catering">Catering</option>
+                    <option value="Dance">Dance</option>
+                    <option value="DJ">DJ</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <div className="form-group">
