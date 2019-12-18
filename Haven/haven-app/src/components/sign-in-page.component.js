@@ -51,6 +51,7 @@ export default class SignIn extends Component {
       window.location = "/gallery";
     });
 
+
     this.setState({
       username:'',
       password: '',
