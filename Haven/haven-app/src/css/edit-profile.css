@@ -1,0 +1,29 @@
+#editprofile {
+
+  padding-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: left;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+
+}
+
+h3{
+  text-align: center;
+}
+.form-control {
+  flex-basis: 30%;
+  align-items: baseline;
+}
+
+.create-profile-text{
+  padding-bottom: 20px;
+  text-align: center !important;
+  color: white;
+}
