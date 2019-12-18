@@ -137,7 +137,7 @@ export default class EditProfile extends Component {
             <input type="text"
                 required
                 className="form-control"
-                value={this.state.Genre}
+                value={this.state.genre}
                 onChange={this.onChangeGenre}
               />
         </div>
