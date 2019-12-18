@@ -48,7 +48,7 @@ export default class SignIn extends Component {
       localStorage.setItem('usertoken', res.data.token);
       //console.log(res.data.token);
       console.log(localStorage.usertoken);
-      //window.location = "/gallery";
+      window.location = "/gallery";
     });
 
     this.setState({
@@ -90,7 +90,7 @@ export default class SignIn extends Component {
               </label>
             </div>
             <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            
+
           </form>
         </div>
         </div>

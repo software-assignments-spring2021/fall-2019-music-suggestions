@@ -26,11 +26,7 @@ const routing = (
     <Route path="/createProfile" component={UserProfile}/>
     <Route path="/myProfiles" component={MyProfiles}/>
     <Route path="/viewProfile" component={viewProfile}/>
-<<<<<<< HEAD
-    
-=======
     <Route path="/profileList" component={ProfileList}/>
->>>>>>> 9440177c561646314e9c971558e60d2e57af72b0
   </Router>
 )
 

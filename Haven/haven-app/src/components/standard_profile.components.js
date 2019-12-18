@@ -18,6 +18,8 @@ export default class StandardProfile extends Component {
       description: '',
       location: '',
       website_url: '',
+      facebook_url: '',
+      instagram_url: '',
       profileImage:'',
       users: []
     }
@@ -33,6 +35,8 @@ export default class StandardProfile extends Component {
         description: response.data.description,
         location: response.data.location,
         website_url: response.data.website_url,
+        facebook_url: response.data.facebook_url,
+        instagram_url: response.data.instagram_url,
         profileImage1: response.data.profileImage1,
         profileImage2: response.data.profileImage2,
         profileImage3: response.data.profileImage3,
@@ -59,7 +63,7 @@ export default class StandardProfile extends Component {
 
   render() {
     return (
-      <div>
+      <div className="allProfile">
         {/* Card deck */}
         <div>
           {/* Card */}
@@ -69,24 +73,24 @@ export default class StandardProfile extends Component {
               <img className="profilePic" src={"http://localhost:5000/" + this.state.profileImage1} />
             </div>
             {/* Card content */}
-            <div>
+            <div className="textProfile">
               {/* Title - Display Name*/}
               <h4><strong>{this.state.display_name}</strong></h4>
               {/* Subtitle - Genre*/}
               <h6>{this.state.genre}</h6>
               {/* Text - Description*/}
-              <p>{this.state.description}</p>
+              <p className= "descriptionText">{this.state.description}</p>
               {/* Facebook */}
-              <a type="button" className="socials"><i className="fab fa-facebook-f" /></a>
+              <a type="button" className="socials" href={this.state.facebook_url}><i className="fab fa-facebook-f" /></a>
               {/* Twitter */}
-              <a type="button" className="socials"><i className="fab fa-twitter" /></a>
+              <a type="button" className="socials" href={this.state.instagram_url}><i className="fab fa-instagram" /></a>
               {/* Google + */}
-              <a type="button" className="socials"><i className="fab fa-dribbble" /></a>
+              <a type="button" className="socials" href={this.state.website_url}><i className="fab fa-dribbble" /></a>
             </div>
             {/* Card footer */}
           </div>
           {/* Card */}
-          <div>
+          <div className = "workContainer">
             <img className="workPic" src={"http://localhost:5000/" + this.state.profileImage2} />
             <img className="workPic" src={"http://localhost:5000/" + this.state.profileImage3} />
             <img className="workPic" src={"http://localhost:5000/" + this.state.profileImage4} />
