@@ -51,6 +51,7 @@ export default class SignIn extends Component {
       window.location = "/gallery";
     });
 
+
     this.setState({
       username:'',
       password: '',
@@ -90,7 +91,7 @@ export default class SignIn extends Component {
               </label>
             </div>
             <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            
+
           </form>
         </div>
         </div>
