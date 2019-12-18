@@ -7,9 +7,16 @@
 #nav {
    background-color: #333;
 
+
  }
 
 
 #text {
   color: white;
+
+}
+
+#right {
+
+  float: right;
 }
