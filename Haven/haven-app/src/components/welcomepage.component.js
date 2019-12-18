@@ -24,7 +24,7 @@ export default class UserList extends Component {
             </button>
           </Link>
           <Link to= "/signin">
-            <button className="button" onclick="window.location.href = 'index.html';">Create Account</button>
+            <button className="button" onclick="window.location.href = 'index.html';">Sign In</button>
           </Link>
 
           {/*a href="#section1">Go back</a*/}
