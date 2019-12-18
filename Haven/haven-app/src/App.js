@@ -17,6 +17,7 @@ import MyProfiles from "./components/myprofiles.component.js";
 
 import StandardProfile from "./components/standard_profile.components.js";
 import ProfileList from "./components/profilesList.component.js";
+import EditProfile from "./components/EditProfile.component.js";
 //import FindUser from "./components/find-user.component";
 //import UpdateUser from "./components/update-user.component";
 //import DeleteUser from "./components/delete-user.component";
@@ -36,6 +37,7 @@ function App() {
       <Route path="/profiles/:id" component={StandardProfile}/>
       <Route path="/signin" component={SignIn}/>
       <Route path="/createUser" component={CreateUser}/>
+      <Route path="/myprofiles/edit/:id" component={EditProfile}/>
     </Router>
   );
 

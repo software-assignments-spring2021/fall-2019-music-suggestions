@@ -25,8 +25,8 @@
   color: #d2c2b0;
 }
 
-#wholesection {
-  height: 870px;
+#background {
+  height: 1000px;
   background-image: url("https://media.giphy.com/media/2tNvsKkc0qFdNhJmKk/giphy.gif");
   background-size: cover;
   margin-top: -50px;

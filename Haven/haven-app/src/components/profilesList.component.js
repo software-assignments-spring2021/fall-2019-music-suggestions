@@ -31,6 +31,7 @@ const Profile = props => (
           {/* Text */}
 
             <div id="cardText">{props.profile.genre} </div>
+            
 
             <div id="social">
               {/* Facebook */}
