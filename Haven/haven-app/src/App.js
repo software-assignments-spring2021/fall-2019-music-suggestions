@@ -16,6 +16,7 @@ import Gallery from "./components/gallery.component.js";
 import MyProfiles from "./components/myprofiles.component.js";
 
 import StandardProfile from "./components/standard_profile.components.js";
+import ProfileList from "./components/profilesList.component.js";
 //import FindUser from "./components/find-user.component";
 //import UpdateUser from "./components/update-user.component";
 //import DeleteUser from "./components/delete-user.component";
@@ -30,7 +31,7 @@ function App() {
       <Route path="/browse" exact component = {Browse} />
       <Route path="/gallery" component = {Gallery}/>
       <Route path="/createProfile" component={UserProfile}/>
-      <Route path="/myProfiles" component={MyProfiles}/>
+      <Route path="/myProfiles" component={ProfileList}/>
       {/*<Route path="/viewProfile" component={StandardProfile}/>*/}
       <Route path="/profiles/:id" component={StandardProfile}/>
       <Route path="/signin" component={SignIn}/>

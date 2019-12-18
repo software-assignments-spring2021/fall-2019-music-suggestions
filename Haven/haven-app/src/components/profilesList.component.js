@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+
+import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
-import "../css/gallery.css"
+import "../css/myprofile.css"
+import * as jwt_decode from 'jwt-decode';
 
 const Profile = props => (
 
@@ -32,13 +35,13 @@ const Profile = props => (
             <div id="social">
               {/* Facebook */}
               <span>
-              <a type="button" className="btn-floating btn-small btn-fb" href={props.profile.facebook_url}><i className="fab fa-facebook-f" /></a></span>
+              <a type="button" className="btn-floating btn-small btn-fb"><i className="fab fa-facebook-f" /></a></span>
               {/* Twitter */}
               <span>
-              <a type="button" className="btn-floating btn-small btn-tw" href={props.profile.instagram_url}><i className="fab fa-instagram" /></a></span>
+              <a type="button" className="btn-floating btn-small btn-tw"><i className="fab fa-twitter" /></a></span>
               {/* Google + */}
               <span>
-              <a type="button" className="btn-floating btn-small btn-dribbble" href={props.profile.website_url}><i className="fab fa-dribbble" /></a></span>
+              <a type="button" className="btn-floating btn-small btn-dribbble"><i className="fab fa-dribbble" /></a></span>
             </div>
             <div id="button">
               <button type="button" class="btn btn-outline-primary waves-effect">
@@ -59,18 +62,23 @@ const Profile = props => (
 )
 
 
-export default class Gallery extends Component {
+export default class profilesList extends Component {
+  constructor(props){
+    super(props);
+    this.state = {profiles: []};
+  }
 
-  constructor(props) {
-      super(props);
+  componentDidMount(){
 
-      this.state = {profiles: []};
-    }
-
-    componentDidMount() {
-    axios.get('http://localhost:5000/profiles/')
+    var token = localStorage.usertoken;
+    var decoded = jwt_decode(token);
+    console.log(decoded.userId);
+    axios.get('http://localhost:5000/profiles/myprofiles/'+decoded.userId)
       .then(response => {
-        this.setState({ profiles: response.data })
+        console.log(response.data);
+        console.log("first one is: ");
+        console.log(response.data[0]);
+        this.setState({profiles: response.data})
       })
       .catch((error) => {
         console.log(error);
@@ -83,12 +91,12 @@ export default class Gallery extends Component {
     })
   }
 
+
   render() {
     return (
-        <div className="card-deck" style={{margin: '10px'}}>
-          { this.ProfileList() }
-        </div>
-
-    );
+      <div className="card-deck" style={{margin: '10px'}}>
+        {this.ProfileList()}
+      </div>
+    )
   }
 }
