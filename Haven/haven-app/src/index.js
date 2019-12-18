@@ -13,6 +13,7 @@ import Gallery from "./components/gallery.component.js";
 import MyProfiles from "./components/myprofiles.component.js";
 import viewProfile from "./components/view-profile.component.js";
 import StandardProfile from "./components/standard_profile.components.js";
+import ProfileList from "./components/profilesList.component.js";
 
 const routing = (
   <Router>
@@ -25,6 +26,7 @@ const routing = (
     <Route path="/createProfile" component={UserProfile}/>
     <Route path="/myProfiles" component={MyProfiles}/>
     <Route path="/viewProfile" component={viewProfile}/>
+    <Route path="/profileList" component={ProfileList}/>
   </Router>
 )
 

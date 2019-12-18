@@ -67,6 +67,12 @@ router.route('/add').post(checkAuth, upload.any(), (req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/myprofiles/:id').get((req,res) => {
+  Profile.find({user_id: req.params.id})
+    .then(profile => res.json(profile))
+    .catch(err => res.status(400).json('Error: ' + err));
+})
+
 
 router.route('/:id').get((req, res) => {
   Profile.findById(req.params.id)
