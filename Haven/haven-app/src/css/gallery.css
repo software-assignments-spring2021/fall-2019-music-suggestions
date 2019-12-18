@@ -21,8 +21,6 @@
 
 #card {
   width: 340px;
-  height: 650px;
-
   overflow: hidden;
   text-align: center;
 }
