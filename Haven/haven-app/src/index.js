@@ -30,7 +30,7 @@ const routing = (
     <Route path="/profileList" component={ProfileList}/>
     <Route path="/edit/:id" component={UpdateUser} />
     <Route path="/profiles/:id" component={StandardProfile}/>
-    <Route path="myprofiles/edit/:id" component={EditProfile}/>
+    <Route path="updateProfile/edit/:id" component={EditProfile}/>
   </Router>
 )
 

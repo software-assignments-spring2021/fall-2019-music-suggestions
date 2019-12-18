@@ -37,7 +37,7 @@ function App() {
       <Route path="/profiles/:id" component={StandardProfile}/>
       <Route path="/signin" component={SignIn}/>
       <Route path="/createUser" component={CreateUser}/>
-      <Route path="/myprofiles/edit/:id" component={EditProfile}/>
+      <Route path="/updateProfile/edit/:id" component={EditProfile}/>
     </Router>
   );
 
