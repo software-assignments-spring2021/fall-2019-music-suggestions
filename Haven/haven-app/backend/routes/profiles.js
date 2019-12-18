@@ -75,6 +75,22 @@ router.route('/myprofiles/:id').get((req,res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 })
 
+router.route('/edit/:id').post((req,res) => {
+  Profile.findById(req.paras.id)
+    .then(profile => {
+      profile.display_name = req.body.display_name;
+      profile.user_type = req.body.user_type;
+      profile.genre = req.body.genre;
+      profile.description = req.body.description;
+      profile.location = req.body.location;
+      profile.website_url = req.body.website_url;
+      profile.save()
+      .then(() => res.json('Profile updated.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  })
+  .catch(err => res.status(400).json('Error: ' + err));
+})
+
 
 router.route('/:id').get((req, res) => {
   Profile.findById(req.params.id)
