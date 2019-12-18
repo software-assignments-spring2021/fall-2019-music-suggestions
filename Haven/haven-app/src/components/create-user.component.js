@@ -117,23 +117,7 @@ onSubmit(e){
 
   //window.location = '/';
   axios.post('http://localhost:5000/users/add', user)
-  .then(res => console.log(res.data));
-
-  const signin = {
-
-    username: this.state.username,
-    password: this.state.password
-
-  }
-  console.log(signin);
-
-  axios.post('http://localhost:5000/users/login', signin)
-  .then(res => {
-    localStorage.setItem('usertoken', res.data.token);
-    //console.log(res.data.token);
-    console.log(localStorage.usertoken);
-    window.location = "/gallery";
-  });
+  .then(res => {console.log(res.data)});
 
   this.setState({
     email: '',
@@ -142,6 +126,12 @@ onSubmit(e){
     user_type:'',
     genre:''
   })
+
+  window.location = "/gallery";
+
+
+
+
 }
 
   render() {
