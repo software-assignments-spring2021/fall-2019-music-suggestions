@@ -25,6 +25,7 @@ const routing = (
     <Route path="/createProfile" component={UserProfile}/>
     <Route path="/myProfiles" component={MyProfiles}/>
     <Route path="/viewProfile" component={viewProfile}/>
+    
   </Router>
 )
 

@@ -50,7 +50,7 @@ export default class SignIn extends Component {
       localStorage.setItem('usertoken', res.data.token);
       //console.log(res.data.token);
       console.log(localStorage.usertoken);
-      window.location = "/gallery";
+      //window.location = "/gallery";
     });
 
     this.setState({
