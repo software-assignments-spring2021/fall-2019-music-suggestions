@@ -6,6 +6,7 @@ import "../css/myprofile.css"
 export default class MyProfiles extends Component {
   render() {
     return (
+      <div id="background">
       <div id="wholesection">
       <div className="main-body">
           <h2 className="No-profile-text"> <strong>You currently have no profiles.<br/> Set one up now:</strong></h2>
@@ -20,6 +21,7 @@ export default class MyProfiles extends Component {
             </button>
           </Link>
 
+      </div>
       </div>
       </div>
     )

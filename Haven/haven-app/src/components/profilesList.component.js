@@ -31,6 +31,7 @@ const Profile = props => (
           {/* Text */}
 
             <div id="cardText">{props.profile.genre} </div>
+            <p> <Link to= {"updateProfile/edit/" + props.profile._id}> Edit</Link></p>
 
             <div id="social">
               {/* Facebook */}
