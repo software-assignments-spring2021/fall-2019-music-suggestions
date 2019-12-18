@@ -32,13 +32,13 @@ const Profile = props => (
             <div id="social">
               {/* Facebook */}
               <span>
-              <a type="button" className="btn-floating btn-small btn-fb"><i className="fab fa-facebook-f" /></a></span>
+              <a type="button" className="btn-floating btn-small btn-fb" href={props.profile.facebook_url}><i className="fab fa-facebook-f" /></a></span>
               {/* Twitter */}
               <span>
-              <a type="button" className="btn-floating btn-small btn-tw"><i className="fab fa-twitter" /></a></span>
+              <a type="button" className="btn-floating btn-small btn-tw" href={props.profile.instagram_url}><i className="fab fa-instagram" /></a></span>
               {/* Google + */}
               <span>
-              <a type="button" className="btn-floating btn-small btn-dribbble"><i className="fab fa-dribbble" /></a></span>
+              <a type="button" className="btn-floating btn-small btn-dribbble" href={props.profile.website_url}><i className="fab fa-dribbble" /></a></span>
             </div>
             <div id="button">
               <button type="button" class="btn btn-outline-primary waves-effect">
