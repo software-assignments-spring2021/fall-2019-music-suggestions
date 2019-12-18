@@ -11,8 +11,9 @@ const Profile = props => (
     <div className="card mb-4" id="card">
       {/* Card image */}
       <div className="view view-cascade overlay">
-
-        <img className="card-img-top" id="img" src={"http://localhost:5000/" + props.profile.profileImage1} alt="Card image cap" />
+        <div id="crop">
+          <img className="card-img-top" id="img" src={"http://localhost:5000/" + props.profile.profileImage1} alt="Card image cap" />
+        </div>
         <a><div className="mask rgba-white-slight"/></a></div>
 
         <div className="card-body card-body-cascade text-center" id="cardContent">

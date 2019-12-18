@@ -8,8 +8,6 @@ import axios from 'axios';
 export default class SignIn extends Component {
   constructor(props){
     super(props);
-
-
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -92,7 +90,7 @@ export default class SignIn extends Component {
               </label>
             </div>
             <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <p className="mt-5 mb-3 text-muted">© 2017-2019</p>
+            
           </form>
         </div>
         </div>

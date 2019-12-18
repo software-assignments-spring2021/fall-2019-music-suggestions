@@ -14,7 +14,7 @@ class Navbar extends Component {
   render() {
 
     const userlink = (
-
+      <div id="right">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <Link to="/createProfile" className="nav-link" id="text">Create Profile</Link>
@@ -24,16 +24,17 @@ class Navbar extends Component {
         </li>
         <li className="nav-item">
           <a href="" onClick={this.logOut.bind(this)} id="text" className="nav-link">
-          LogOut
+          Log Out
           </a>
         </li>
 
       </ul>
+      </div>
 
     )
 
     const loginRegisterLink = (
-
+      <div id="right">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
         <Link to="/createUser" className="nav-link" id="text">Create Account</Link>
@@ -42,6 +43,7 @@ class Navbar extends Component {
         <Link to="/signin" className="nav-link" id="text">Sign In</Link>
         </li>
       </ul>
+      </div>
 
     )
 
@@ -82,10 +84,7 @@ class Navbar extends Component {
 
             {localStorage.usertoken ? userlink : loginRegisterLink}
 
-            {/* Search form */}
-            <form className="form-inline">
-              <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
-            </form>
+
           </div>
           {/* Collapsible content */}
         </nav>

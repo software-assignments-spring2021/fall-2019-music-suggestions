@@ -3,6 +3,8 @@
   font-family: "Helvetica", sans-serif;
   font-size:20pt;
   line-height: 38px;
+  padding-top: 50px;
+  color: white;
 }
 
 .main-body button {
@@ -21,4 +23,11 @@
 .main-body .button:hover{
   background-color: white;
   color: #d2c2b0;
+}
+
+#wholesection {
+  height: 870px;
+  background-image: url("https://media.giphy.com/media/2tNvsKkc0qFdNhJmKk/giphy.gif");
+  background-size: cover;
+  margin-top: -50px;
 }

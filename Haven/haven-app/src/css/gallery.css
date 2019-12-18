@@ -7,11 +7,15 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-
+#div {
+    position: relative;
+    overflow: hidden;
+}
 
 #img {
   height: 340px;
   display: block;
+  object-fit: cover;
 
 }
 

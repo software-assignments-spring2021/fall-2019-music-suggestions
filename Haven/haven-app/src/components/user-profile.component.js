@@ -20,10 +20,10 @@ export default class UserProfile extends Component {
 
     this.state = {
       display_name: '',
-      user_type: '',
-      genre: '',
+      user_type: 'consumer',
+      genre: 'photographer',
       description: '',
-      location: '',
+      location: 'New York, NY',
       website_url: '',
       profileImage1: null,
       profileImage2: null,
@@ -130,10 +130,10 @@ onSubmit(e){
 
   this.setState({
     display_name: '',
-    user_type: '',
-    genre: '',
+    user_type: 'consumer',
+    genre: 'photographer',
     description: '',
-    location: '',
+    location: 'New York, NY',
     website_url: '',
     profileImage1: null,
     profileImage2: null,
@@ -145,10 +145,10 @@ onSubmit(e){
 
   render() {
     return (
-
+      <div id="background">
       <div id="signin">
           <div>
-              <h3 className="create-profile-text">Create New Profile</h3>
+              <h3 className="create-profile-text"><strong>Create New Profile</strong></h3>
               <form onSubmit={this.onSubmit}>
 
                 <div className="form-group">
@@ -227,12 +227,11 @@ onSubmit(e){
 
                 <form className="md-form" action="#">
                   <div className="file-field">
-                    <div className="btn btn-primary btn-sm float-left">
-                    <span>Choose files</span>
+                    <div>
+                    <span>Choose files</span><br/>
                     <input type="file" multiple onChange={(e) => this.onChangeProfileImage(e)}/>
                     </div>
-                    <div className="file-path-wrapper">
-                    <input className="file-path validate" type="text" placeholder="Upload one or more files"/>
+                    <div className="file-path-wrapper"><br/>
                     </div>
                     </div>
                     </form>
@@ -243,6 +242,7 @@ onSubmit(e){
                 </div>
               </form>
             </div>
+          </div>
           </div>
 
     )
