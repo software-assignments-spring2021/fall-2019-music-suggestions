@@ -55,12 +55,14 @@ router.route('/add').post(checkAuth, upload.any(), (req, res) => {
   const description = req.body.description;
   const location = req.body.location;
   const website_url = req.body.website_url;
+  const facebook_url = req.body.facebook_url;
+  const instagram_url = req.body.instagram_url;
   const profileImage1 = req.files[0].path;
   const profileImage2 = req.files[1].path;
   const profileImage3 = req.files[2].path;
   const profileImage4 = req.files[3].path;
 
-  const newProfile = new Profile({user_id, display_name, user_type, genre, description, location, website_url, profileImage1,profileImage2,profileImage3,profileImage4});
+  const newProfile = new Profile({user_id, display_name, user_type, genre, description, location, website_url, facebook_url, instagram_url, profileImage1,profileImage2,profileImage3,profileImage4});
 
   newProfile.save()
     .then(() => res.json('Profile added!'))
@@ -95,6 +97,8 @@ router.route('/update/:id').post(upload.single('profileImage'), (req, res) => {
       profile.description = req.body.description;
       profile.location = req.body.location;
       profile.website_url = req.body.website_url;
+      profile.facebook_url = req.body.facebook_url;
+      profile.instagram_url = req.body.instagram_url;
       profile.profileImage = req.file.path;
 
       users.save()

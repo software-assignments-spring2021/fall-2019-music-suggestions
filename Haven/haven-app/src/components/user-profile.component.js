@@ -13,6 +13,8 @@ export default class UserProfile extends Component {
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeWebsite_url = this.onChangeWebsite_url.bind(this);
+    this.onChangeFacebook_url = this.onChangeFacebook_url.bind(this);
+    this.onChangeInstagram_url = this.onChangeInstagram_url.bind(this);
     this.onChangeProfileImage = this.onChangeProfileImage.bind(this);
 
 
@@ -25,6 +27,8 @@ export default class UserProfile extends Component {
       description: '',
       location: 'New York, NY',
       website_url: '',
+      facebook_url: '',
+      instagram_url: '',
       profileImage1: null,
       profileImage2: null,
       profileImage3: null,
@@ -72,6 +76,18 @@ export default class UserProfile extends Component {
     })
   }
 
+  onChangeFacebook_url(e){
+    this.setState({
+      facebook_url: e.target.value
+    })
+  }
+
+  onChangeInstagram_url(e){
+    this.setState({
+      instagram_url: e.target.value
+    })
+  }
+
   onChangeProfileImage(e){
 
 
@@ -95,6 +111,8 @@ onSubmit(e){
     description: this.state.description,
     location: this.state.location,
     website_url: this.state.website_url,
+    facebook_url: this.state.facebook_url,
+    instagram_url: this.state.instagram_url,
     profileImage1: this.state.profileImage1,
     profileImage2: this.state.profileImage2,
     profileImage3: this.state.profileImage3,
@@ -116,6 +134,8 @@ onSubmit(e){
   formData.append('description', this.state.description);
   formData.append('location', this.state.location);
   formData.append('website_url', this.state.website_url);
+  formData.append('facebook_url', this.state.facebook_url);
+  formData.append('instagram_url', this.state.instagram_url);
   formData.append('profileImage1', this.state.profileImage1);
   formData.append('profileImage2', this.state.profileImage2);
   formData.append('profileImage3', this.state.profileImage3);
@@ -135,6 +155,8 @@ onSubmit(e){
     description: '',
     location: 'New York, NY',
     website_url: '',
+    facebook_url: '',
+    instagram_url: '',
     profileImage1: null,
     profileImage2: null,
     profileImage3: null,
@@ -216,12 +238,30 @@ onSubmit(e){
                   </select>
                 </div>
                 <div className="form-group">
-                  <label>Website: </label>
+                  <label>Personal Website: </label>
                   <input  type="text"
                       required
                       className="form-control"
                       value={this.state.website_url}
                       onChange={this.onChangeWebsite_url}
+                      />
+                </div>
+                <div className="form-group">
+                  <label>Facebook Link: </label>
+                  <input  type="text"
+                      required
+                      className="form-control"
+                      value={this.state.facebook_url}
+                      onChange={this.onChangeFacebook_url}
+                      />
+                </div>
+                <div className="form-group">
+                  <label>Instagram Link: </label>
+                  <input  type="text"
+                      required
+                      className="form-control"
+                      value={this.state.instagram_url}
+                      onChange={this.onChangeInstagram_url}
                       />
                 </div>
 

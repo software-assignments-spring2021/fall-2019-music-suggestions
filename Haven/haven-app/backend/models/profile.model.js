@@ -45,6 +45,18 @@ const profileSchema = new Schema({
     unique: false,
     trim: false
   },
+  facebook_url:{
+    type: String,
+    required: false,
+    unique: false,
+    trim: false
+  },
+  instagram_url:{
+    type: String,
+    required: false,
+    unique: false,
+    trim: false
+  },
   profileImage1:{
     type:String,
     required:false
