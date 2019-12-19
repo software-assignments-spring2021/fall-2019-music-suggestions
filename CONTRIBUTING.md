@@ -8,7 +8,9 @@ fall-2019-music-suggestions/Haven/haven-app/backend
 
 Run the backend with the command 'nodemon server' to connect to MongoDB.
 
-Go back into the 'haven-app' directory and run the command 'npm start' to run the frontend.
+Go back into the 'haven-app' directory and run the command 'npm start' to run the frontend. A bowser window should automatically load.
+
+To sign into an example user, use the credential 'mgrossenbacher' for both the username and password feilds. 
 
 If there are any issues, check to make sure all of the necessary dependancies are installed for the frontend and backend. Further follow up on any issues can be sent to mrg498@nyu.edu.
 
