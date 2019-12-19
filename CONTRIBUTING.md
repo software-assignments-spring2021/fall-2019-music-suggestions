@@ -2,6 +2,17 @@
 
 ## Instructions to Download and Run
 
+To Download, clone the respository. In your terminal window, navigate to the 'backend' folder by following the path:
+
+fall-2019-music-suggestions/Haven/haven-app/backend
+
+Run the backend with the command 'nodemon server' to connect to MongoDB.
+
+Go back into the 'haven-app' directory and run the command 'npm start' to run the frontend.
+
+If there are any issues, check to make sure all of the necessary dependancies are installed for the frontend and backend. Further follow up on any issues can be sent to mrg498@nyu.edu.
+
+
 ## Daily Standups Schedule
 
 Monday: 1:45pm
