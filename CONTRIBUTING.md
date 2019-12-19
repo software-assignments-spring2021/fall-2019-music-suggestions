@@ -2,7 +2,7 @@
 
 ## Instructions to Download and Run
 
-To Download, clone the respository. In your terminal window, navigate to the 'backend' folder by following the path:
+Clone the respository to download. In your terminal window, navigate to the 'backend' folder by following the path:
 
 fall-2019-music-suggestions/Haven/haven-app/backend
 
