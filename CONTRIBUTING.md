@@ -10,7 +10,9 @@ Run the backend with the command 'nodemon server' to connect to MongoDB.
 
 Go back into the 'haven-app' directory and run the command 'npm start' to run the frontend. A bowser window should automatically load.
 
-To sign into an example user, use the credential 'mgrossenbacher' for both the username and password feilds. 
+If you would like to sign into an example user, use the credential 'mgrossenbacher' for both the username and password feilds. You can also create your own account. 
+
+Noteable bug: when creating a profile, exaclty 4 photos must be uploaded at once with the rest of the form.
 
 If there are any issues, check to make sure all of the necessary dependancies are installed for the frontend and backend. Further follow up on any issues can be sent to mrg498@nyu.edu.
 
