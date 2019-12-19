@@ -1,5 +1,7 @@
 # Contributing
 
+## Instructions to Download and Run
+
 ## Daily Standups Schedule
 
 Monday: 1:45pm
